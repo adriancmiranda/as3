@@ -1,4 +1,4 @@
-AS-AMPackage
+ActionScript
 ============
 
 Another ActionScript package
