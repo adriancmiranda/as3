@@ -2,6 +2,7 @@ package com.am.net {
 	import com.am.utils.num;
 	import com.am.utils.clamp;
 	import com.am.utils.normalize;
+
 	import flash.net.NetConnection;
 	import flash.net.NetStream;
 	import flash.utils.Timer;

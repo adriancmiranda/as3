@@ -3,10 +3,12 @@ package com.am.net {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
+	 * @usage: StreamStatus.get(netStatusEvent.info.code).level
 	 */
 	public final class StreamStatus {
 		private static var $map:Dictionary = new Dictionary(true);
 
+		public static const UNKNOWN:String = 'unknown';
 		public static const WARNING:String = 'warning';
 		public static const STATUS:String = 'status';
 		public static const ERROR:String = 'error';
@@ -61,7 +63,7 @@ package com.am.net {
 		}
 
 		public static function get(code:String):StreamStatus {
-			return contains(code) ? $map[code] : null;
+			return contains(code) ? $map[code] : new StreamStatus(code, UNKNOWN);
 		}
 
 		public static function contains(code:String):Boolean {

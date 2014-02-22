@@ -1,5 +1,6 @@
 package com.am.utils {
 	import com.am.utils.num;
+
 	import flash.system.Security;
 	import flash.external.ExternalInterface;
 	import flash.net.sendToURL;
