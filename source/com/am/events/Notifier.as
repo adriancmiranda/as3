@@ -10,7 +10,7 @@ package com.am.events  {
 		protected static var notification:Note;
 		protected static var dispatcher:Dispatcher;
 
-		public static function notify(notificationName:String, target:Object, data:* = null):Boolean {
+		public static function notify(notificationName:String, target:Object = null, data:* = null):Boolean {
 			notification = new Note(notificationName, target, data);
 			return dispatchEvent(notification);
 		}

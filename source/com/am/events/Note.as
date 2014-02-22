@@ -9,7 +9,7 @@ package com.am.events {
 		protected var _ready:Boolean;
 		public var data:Object;
 
-		public function Note(type:String, target:Object, data:Object = null, bubbles:Boolean = false, cancelable:Boolean = false) {
+		public function Note(type:String, target:Object = null, data:Object = null, bubbles:Boolean = false, cancelable:Boolean = false) {
 			super(type, bubbles, cancelable);
 			this._target = target;
 			this.data = data || {};
