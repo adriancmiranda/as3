@@ -1,4 +1,4 @@
-package com.ad.events {
+package com.am.events {
 	import flash.events.IEventDispatcher;
 	import flash.events.EventDispatcher;
 	import flash.events.Event;
