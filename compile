@@ -20,6 +20,7 @@ local CONFIG="-namespace http://www.adobe.com/$(date +%Y)/AM manifest.xml";
 local compc="$FLEX_SDK/bin/compc";
 
 # Status
+local BCya='\e[1;36m';
 printf "${BCya}Running $SYM symlink on GNU bash $BASH_VERSION${NC}\n";
 printf "${BCya}From:${NC} $PWD\n";
 printf "${BCya}Origin:${NC} $ABS\n";
