@@ -75,8 +75,8 @@ function generateSWC {
 		local CLASSES="$(find $ABS/ -name *.as -or -name *.mxml)";
 		local RESOURCES="";
 
-		CONFIG="$CONFIG -source-path ${1:$ABS/source}";
-		CONFIG="$CONFIG -output='$ABS/dist/am.swc'";
+		CONFIG="$CONFIG -source-path ${2:$ABS/source}";
+		CONFIG="$CONFIG -output='$ABS/dist/${1:am}.swc'";
 		CONFIG="$CONFIG -include-namespaces http://www.adobe.com/$(date +%Y)/AM";
 		CONFIG="$CONFIG -include-classes $CLASSES";
 
