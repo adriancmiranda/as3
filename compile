@@ -7,6 +7,6 @@
 # Version: 0.0.1
 #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-FLEX_SDK="";
+FLEX_SDK="/Applications/Utilities/SDKs/ApacheFlexSDK4";
 $compc="$FLEX_SDK/bin/compc";
 $compc -help list;
