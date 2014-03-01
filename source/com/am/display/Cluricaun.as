@@ -10,6 +10,7 @@ package com.am.display {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 > FIXME: Interface hierarchy to implements.
+	 > WARNING: @alpha tags are in test.
 	 */
 	dynamic public class Cluricaun extends Joker implements IDisplay/*, IMovieClip*/ {
 		private var _registrationPoint:Point;
