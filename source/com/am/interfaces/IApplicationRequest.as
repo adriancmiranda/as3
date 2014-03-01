@@ -1,8 +1,8 @@
-package com.ad.interfaces {
-	import com.ad.data.Language;
-	import com.ad.data.Header;
-	import com.ad.data.View;
-	import com.ad.data.File;
+package com.am.interfaces {
+	import com.am.data.Language;
+	import com.am.data.Header;
+	import com.am.data.View;
+	import com.am.data.File;
 
 	import flash.display.DisplayObject;
 

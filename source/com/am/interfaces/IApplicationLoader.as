@@ -1,6 +1,6 @@
-package com.ad.interfaces {
-	import com.ad.data.File;
-	
+package com.am.interfaces {
+	import com.am.data.File;
+
 	import com.greensock.loading.core.LoaderCore;
 	import com.greensock.loading.LoaderMax;
 
