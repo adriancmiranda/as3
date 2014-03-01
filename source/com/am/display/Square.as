@@ -1,11 +1,12 @@
 package com.am.display {
 	import com.am.display.Leprechaun;
+	import flash.display.BitmapData;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
 	public class Square extends Leprechaun {
-		private var _color:uint;
+		private var _fill:*;
 		private var _width:Number;
 		private var _height:Number;
 		private var _alpha:Number;
@@ -14,8 +15,11 @@ package com.am.display {
 		private var _bottomLeftRadius:Number;
 		private var _bottomRightRadius:Number;
 
-		public function Square(color:uint = 0x0, width:Number = 1, height:Number = 1, alpha:Number = 1, topLeftRadius:Number = 0, topRightRadius:Number = 0, bottomLeftRadius:Number = 0, bottomRightRadius:Number = 0) {
-			this._color = color;
+		public function Square(fill:* = 0x0, width:Number = 1, height:Number = 1, alpha:Number = 1, topLeftRadius:Number = 0, topRightRadius:Number = 0, bottomLeftRadius:Number = 0, bottomRightRadius:Number = 0) {
+			super.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, false, 0, true);
+			super.tabEnabled = false;
+			super.focusRect = false;
+			this._fill = fill;
 			this._width = width;
 			this._height = height;
 			this._alpha = alpha;
@@ -26,15 +30,32 @@ package com.am.display {
 			this.draw();
 		}
 
+		private function onRemovedFromStage(event:Event):void {
+			super.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, false);
+			super.graphics.clear();
+			this._bottomRightRadius = NaN;
+			this._bottomLeftRadius = NaN;
+			this._topRightRadius = NaN;
+			this._topLeftRadius = NaN;
+			this._alpha = NaN;
+			this._heigth = NaN;
+			this._width = NaN;
+			this._fill = null;
+		}
+
 		private function draw():void {
 			super.graphics.clear();
-			super.graphics.beginFill(this._color, this._alpha);
+			if (this._fill is BitmapData) {
+				super.graphics.beginBitmapFill(this._fill, null, true);
+			} else if (this._fill is uint) {
+				super.graphics.beginFill(this._fill, this._alpha);
+			}
 			super.graphics.drawRoundRectComplex(0, 0, this._width, this._height, this._topLeftRadius, this._topRightRadius, this._bottomLeftRadius, this._bottomRightRadius);
 			super.graphics.endFill();
 		}
 
-		public function set color(value:uint):void {
-			this._color = value;
+		public function set fill(value:*):void {
+			this._fill = value;
 			this.draw();
 		}
 
@@ -75,7 +96,7 @@ package com.am.display {
 		}
 
 		override public function toString():String {
-			return '[Rect ' + super.name + ']';
+			return '[Square ' + super.name + ']';
 		}
 	}
 }
