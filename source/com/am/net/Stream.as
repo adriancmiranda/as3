@@ -12,7 +12,7 @@ package com.am.net {
 	 * @tip To use video steps just player 10.1 or older and
 	 * export video with key frame distance: 1
 	 */
-	public class Stream extends NetStream {
+	public class Stream extends NetStream implements IStream {
 		public static var checkPolicyFile:Boolean = true;
 		private var _connection:NetConnection;
 		private var _isPaused:Boolean;
