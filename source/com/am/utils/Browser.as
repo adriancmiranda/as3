@@ -32,9 +32,9 @@ package com.am.utils {
 			body = encodeURIComponent(body);
 			if (available) {
 				if (appName == 'Microsoft Internet Explorer') {
-					sendToURL(new URLRequest('mailto:' + email + '?cc=' + cc + '&bcc' + cco + '&subject=' + subject + '&body=' + body));
+					sendToURL(new URLRequest('mailto:' + email + '?Content-Type: text/plain;charset=UTF-8&cc=' + cc + '&bcc' + cco + '&subject=' + subject + '&body=' + body));
 				} else {
-					gotoURL('mailto:' + email + '?cc=' + cc + '&bcc' + cco + '&subject=' + subject + '&body=' + body, '_parent');
+					gotoURL('mailto:' + email + '?Content-Type: text/plain;charset=UTF-8&cc=' + cc + '&bcc' + cco + '&subject=' + subject + '&body=' + body, '_parent');
 				}
 			}
 		}
