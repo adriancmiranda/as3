@@ -27,7 +27,7 @@ printf "${BCya}From:${NC} $PWD\n";
 printf "${BCya}Origin:${NC} $ABS\n";
 
 # Execution
-PACKAGE="";
+PACKAGE="$(find . -name *.as -or -name *.mxml)";
 RESOURCES="";
 CONFIG="$CONFIG -source-path ${1:$ABS/source}";
 CONFIG="$CONFIG -output='$ABS/dist/am.swc'";
