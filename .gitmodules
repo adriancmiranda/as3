@@ -1,0 +1,6 @@
+[submodule "library/swfaddress"]
+	path = library/swfaddress
+	url = git://github.com/robwalch/swfaddress.git
+[submodule "library/greensock"]
+	path = library/greensock
+	url = git://github.com/greensock/GreenSock-AS3.git
