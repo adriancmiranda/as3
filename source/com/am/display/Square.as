@@ -17,8 +17,6 @@ package com.am.display {
 
 		public function Square(fill:* = 0x0, width:Number = 1, height:Number = 1, alpha:Number = 1, topLeftRadius:Number = 0, topRightRadius:Number = 0, bottomLeftRadius:Number = 0, bottomRightRadius:Number = 0) {
 			super.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, false, 0, true);
-			super.tabEnabled = false;
-			super.focusRect = false;
 			this._fill = fill;
 			this._width = width;
 			this._height = height;

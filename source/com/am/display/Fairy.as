@@ -2,17 +2,17 @@ package com.am.display {
 	import com.am.events.IDispatcher;
 
 	import __AS3__.vec.Vector;
-	import flash.display.Sprite;
+	import flash.display.MovieClip;
 	import flash.events.Event;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
-	dynamic public class Nymph extends Sprite implements IDispatcher {
+	dynamic public class Fairy extends MovieClip implements IDispatcher {
 		private var _types:Vector.<String> = new Vector.<String>();
 		private var _listeners:Vector.<Function> = new Vector.<Function>();
 
-		public function Nymph() {
+		public function Fairy() {
 			super.tabEnabled = false;
 			super.focusRect = false;
 		}
@@ -62,7 +62,7 @@ package com.am.display {
 		}
 
 		override public function toString():String {
-			return '[Nymph ' + super.name + ']';
+			return '[Fairy ' + super.name + ']';
 		}
 	}
 }
