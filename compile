@@ -1,0 +1,36 @@
+#!/bin/bash
+#
+# Title: AIR Project Compiler
+# Usage: ./compile
+# Copyright: 2014 Adrian C. Miranda
+# License: Apache License
+# Version: 0.0.1
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Wherever you installed the Apache Flex SDK (e.g. /Applications/Utilities/SDKs/ApacheFlexSDK4)
+FLEX_SDK="/Applications/Utilities/SDKs/ApacheFlexSDK4";
+
+# sdk
+if [[ ! -d "$FLEX_SDK" ]]; then
+	# if directory doensn't exists or not is directory.
+	printf "${ERROR}ERROR:${NC} Flex SDK not found.\n";
+	exit 1;
+else
+	# This should see the list of defined variables.
+	# If you need to remove an existing FLEX_HOME, you can do so:
+	export -n FLEX_HOME;
+
+	# After removing the chances of having a variable outdated...
+	export FLEX_HOME="$FLEX_SDK";
+fi
+
+# compc
+if [[ ! -x "$FLEX_SDK/bin/compc" ]]; then
+	# if file doensn't exists or not is executable.
+	printf "${ERROR}ERROR:${NC} compc not found.\n";
+	exit 1;
+else
+	compc="$FLEX_SDK/bin/compc";
+fi
+
+$compc -help list;
