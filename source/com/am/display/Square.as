@@ -1,4 +1,5 @@
 package com.am.display {
+	import com.am.display.Leprechaun;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

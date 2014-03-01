@@ -10,7 +10,7 @@ package com.am.net {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 * @tip To use video steps just player 10.1 or older and
-	 * Export video with key frame distance: 1
+	 * export video with key frame distance: 1
 	 */
 	public class Stream extends NetStream {
 		public static var checkPolicyFile:Boolean = true;

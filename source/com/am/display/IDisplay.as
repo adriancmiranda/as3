@@ -1,0 +1,21 @@
+package com.am.display {
+	import flash.display.DisplayObject;
+	import flash.display.DisplayObjectContainer;
+
+	/**
+	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
+	 */
+	public interface IDisplay extends IMovieClip {
+		function move(x:Number, y:Number):void;
+		function size(width:Number, height:Number):void;
+		function fit(width:Number, height:Number):void;
+		function get locked():Boolean;
+		function set scale(value:Number):void;
+		function set locked(value:Boolean):void;
+		function set showRegistrationPoint(value:Boolean):void;
+		function moveRegistrationPoint(x:Number, y:Number):void;
+		function removeChildren(target:DisplayObjectContainer = null):void;
+		function die():void;
+		function toString():String;
+	}
+}
