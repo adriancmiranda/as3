@@ -8,7 +8,7 @@ To clone this project (and all its submodules):
 ## Dependencies:
 ### Config constants
 
-    (boolean) CONFIG::FLASH_10_1
-    (boolean) CONFIG::WEB
-    (boolean) CONFIG::AIR
+    CONFIG::FLASH_10_1 (boolean)
+    CONFIG::WEB (boolean)
+    CONFIG::AIR (boolean)
     
