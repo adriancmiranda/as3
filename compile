@@ -21,6 +21,7 @@ local compc="$FLEX_SDK/bin/compc";
 
 # Status
 local BCya='\e[1;36m';
+local NC='\e[0m';
 printf "${BCya}Running $SYM symlink on GNU bash $BASH_VERSION${NC}\n";
 printf "${BCya}From:${NC} $PWD\n";
 printf "${BCya}Origin:${NC} $ABS\n";
