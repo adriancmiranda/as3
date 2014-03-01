@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Title: AIR Project Compiler
+# Title: Component Compiler
 # Usage: ./compile
 # Copyright: 2014 Adrian C. Miranda
 # License: Apache License
@@ -9,29 +9,103 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # SYM: For reading through a symlink, which is usually not what you want
 # (you usually don't want to confuse the user this way)
-local SYM=$(basename "$(test -L "$0" && readlink "$0" || echo "$0")");
-local DIR=$(dirname "$0");
-local PWD=$(pwd);
-local ABS=$(cd "$DIR"; pwd);
+SYM=$(basename "$(test -L "$0" && readlink "$0" || echo "$0")");
+DIR=$(dirname "$0");
+PWD=$(pwd);
+ABS=$(cd "$DIR"; pwd);
 
-# Config
-local FLEX_SDK="/Applications/Utilities/SDKs/ApacheFlexSDK4";
-local CONFIG="-namespace http://www.adobe.com/$(date +%Y)/AM manifest.xml";
-local compc="$FLEX_SDK/bin/compc";
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# SETTINGS
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+FLEX_SDK="/Applications/Utilities/SDKs/ApacheFlexSDK4";
+compc="$FLEX_SDK/bin/compc";
 
-# Status
-local BCya='\e[1;36m';
-local NC='\e[0m';
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# HUMANIZE
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# colors
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# @usage: printf "${Bla}black ${Red}red ${NC} ...\n";
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# regular         bold               underline          high intensity     boldhigh intens..   background         high intensity bgs
+Yel='\e[0;33m';   BYel='\e[1;33m';   UYel='\e[4;33m';   IYel='\e[0;93m';   BIYel='\e[1;93m';   On_Yel='\e[43m';   On_IYel='\e[0;103m';
+Pur='\e[0;35m';   BPur='\e[1;35m';   UPur='\e[4;35m';   IPur='\e[0;95m';   BIPur='\e[1;95m';   On_Pur='\e[45m';   On_IPur='\e[0;105m';
+Bla='\e[0;30m';   BBla='\e[1;30m';   UBla='\e[4;30m';   IBla='\e[0;90m';   BIBla='\e[1;90m';   On_Bla='\e[40m';   On_IBla='\e[0;100m';
+Gre='\e[0;32m';   BGre='\e[1;32m';   UGre='\e[4;32m';   IGre='\e[0;92m';   BIGre='\e[1;92m';   On_Gre='\e[42m';   On_IGre='\e[0;102m';
+Whi='\e[0;37m';   BWhi='\e[1;37m';   UWhi='\e[4;37m';   IWhi='\e[0;97m';   BIWhi='\e[1;97m';   On_Whi='\e[47m';   On_IWhi='\e[0;107m';
+Blu='\e[0;34m';   BBlu='\e[1;34m';   UBlu='\e[4;34m';   IBlu='\e[0;94m';   BIBlu='\e[1;94m';   On_Blu='\e[44m';   On_IBlu='\e[0;104m';
+Cya='\e[0;36m';   BCya='\e[1;36m';   UCya='\e[4;36m';   ICya='\e[0;96m';   BICya='\e[1;96m';   On_Cya='\e[46m';   On_ICya='\e[0;106m';
+Red='\e[0;31m';   BRed='\e[1;31m';   URed='\e[4;31m';   IRed='\e[0;91m';   BIRed='\e[1;91m';   On_Red='\e[41m';   On_IRed='\e[0;101m';
+
+# alert messages
+SUCCESS=${BBla}${On_Gre};
+ERROR=${BWhi}${On_Red};
+WARN=${BBla}${On_Yel};
+
+# no color
+NC='\e[0m';
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# line decoration
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+___="${Red}$(printf %81s |tr " " "~")${NC}";
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# STATUS
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 printf "${BCya}Running $SYM symlink on GNU bash $BASH_VERSION${NC}\n";
 printf "${BCya}From:${NC} $PWD\n";
 printf "${BCya}Origin:${NC} $ABS\n";
 
-# Execution
-PACKAGE="$(find . -name *.as -or -name *.mxml)";
-RESOURCES="";
-CONFIG="$CONFIG -source-path ${1:$ABS/source}";
-CONFIG="$CONFIG -output='$ABS/dist/am.swc'";
-CONFIG="$CONFIG -include-namespaces http://www.adobe.com/$(date +%Y)/AM";
-CONFIG="$CONFIG -include-classes $PACKAGE";
-CONFIG="$CONFIG -include-file $RESOURCES";
-$compc $CONFIG;
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# METHODS
+#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function generateSWC {
+	{ # try
+
+		local CONFIG="-namespace http://www.adobe.com/$(date +%Y)/AM manifest.xml";
+		local CLASSES="$(find $ABS/ -name *.as -or -name *.mxml)";
+		local RESOURCES="";
+
+		CONFIG="$CONFIG -source-path ${1:$ABS/source}";
+		CONFIG="$CONFIG -output='$ABS/dist/am.swc'";
+		CONFIG="$CONFIG -include-namespaces http://www.adobe.com/$(date +%Y)/AM";
+		CONFIG="$CONFIG -include-classes $CLASSES";
+
+		if [[ ! -z "${RESOURCES+xxx}" && ! -z "$RESOURCES" ]]; then
+			CONFIG="$CONFIG -include-file $RESOURCES";
+		fi
+
+		$compc $CONFIG && {
+
+			local endTime=`eval date +%s`;
+			let PTIME=($endTime - $startTime);
+			if [[ $PTIME > 1 ]]; then
+				printf "${Gre}✓ SWC (Built in $PTIME seconds)\n";
+			else
+				printf "${Gre}✓ SWC (Built in $PTIME second)\n";
+			fi
+
+		}
+
+	} || { # catch
+
+		printf "\n$___\n${ERROR}✖ ERROR:${NC} Build package failed\n$___\n";
+		exit 1;
+
+	}
+}
+
+# Run
+generateSWC;
+
+# Stop proccess
+exit 0;
