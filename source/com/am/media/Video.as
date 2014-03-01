@@ -13,6 +13,7 @@ package com.am.media {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 * @tips To use video steps just player 10.1 or older and
 	 * export video with key frame distance: 1
+	 * TODO: optional autoplay
 	 */
 	public class Video extends flash.media.Video {
 		public static const MIN_SPEED:Number = 0.02;
