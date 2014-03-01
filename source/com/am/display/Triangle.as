@@ -29,10 +29,10 @@ package com.am.display {
 				super.graphics.lineTo(-this._dimensions.W2 + this._width, this._dimensions.H2 + this._height);
 				super.graphics.lineTo(this._width, -this._dimensions.H2 + this._height);
 			} else {
-                super.graphics.moveTo(this._width, this._dimensions.H2 + this._height);
-                super.graphics.lineTo(this._dimensions.W2 + this._width, -this._dimensions.H2 + this._height);
-                super.graphics.lineTo(-this._dimensions.W2 + this._width, -this._dimensions.H2 + this._height);
-                super.graphics.lineTo(this._width, this._dimensions.H2 + this._height);
+				super.graphics.moveTo(this._width, this._dimensions.H2 + this._height);
+				super.graphics.lineTo(this._dimensions.W2 + this._width, -this._dimensions.H2 + this._height);
+				super.graphics.lineTo(-this._dimensions.W2 + this._width, -this._dimensions.H2 + this._height);
+				super.graphics.lineTo(this._width, this._dimensions.H2 + this._height);
 			}
 			super.graphics.endFill();
 		}

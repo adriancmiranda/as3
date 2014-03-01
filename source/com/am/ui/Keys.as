@@ -4,11 +4,11 @@ package com.am.ui {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
-	public final class KeyCombo {
+	public final class Keys {
 		private var _keyCodes:Array;
 		private var _id:String;
 
-		public function KeyCombo(id:String, ...keys:Array) {
+		public function Keys(id:String, ...keys:Array) {
 			this._id = id;
 			if (!this._id) trace(this.toString(), 'error');
 			if (keys.length < 2) trace(this.toString(), 'error');
@@ -29,13 +29,13 @@ package com.am.ui {
 			return this._id;
 		}
 
-		public function equals(keyCombo:KeyCombo):Boolean {
+		public function equals(keyCombo:Keys):Boolean {
 			if (keyCombo == this) return true;
 			return ArrayUtil.strictlyEquals(this.keyCodes, keyCombo.keyCodes);
 		}
 
 		public function toString():String {
-			return '[KeyCombo ' + (this._id + ' (' + this._keyCodes) + ')]';
+			return '[Keys ' + (this._id + ' (' + this._keyCodes) + ')]';
 		}
 	}
 }
