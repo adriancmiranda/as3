@@ -12,6 +12,7 @@ package com.am.display {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 > FIXME: Interface hierarchy to implements.
+	 > WARNING: @alpha tags are in test.
 	 */
 	public class Leprechaun extends Nymph implements IDisplay/*, ISprite*/ {
 		private var _registrationPoint:Point;
