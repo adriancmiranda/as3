@@ -24,8 +24,8 @@ package com.am.net {
 			super.checkPolicyFile = Stream.checkPolicyFile;
 			super.client = new Object();
 			super.client.onCuePoint = this.onCuePoint;
+			super.client.onMetaData = this.onMetaData;
 			super.client.onXMPData = this.onXMPData;
-			super.client.onXMPXML = this.onXMPXML;
 			this._timer = timer;
 		}
 
@@ -131,12 +131,11 @@ package com.am.net {
 		}
 
 		private function onXMPData(info:Object):void {
-			var onXMPXML:XML = new XML(info.data);
-			trace(onXMPXML);
+			var XMPXML:XML = new XML(info.data);
+			trace(XMPXML);
 		}
 
 		public function get bufferPercent():Number {
-
 		    return clamp(num((this.bufferTime / this.bufferLength) * 100), 0, 100);
 		}
 
@@ -166,6 +165,14 @@ package com.am.net {
 
 		public function get metaData():Object {
 			return this._metaData;
+		}
+
+		public function get duration():Number {
+			return Math.round(this.length);
+		}
+
+		public function get length():Number {
+			return num(this.metaData);
 		}
 
 		override public function dispose():void {
