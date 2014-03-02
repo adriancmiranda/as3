@@ -1,4 +1,4 @@
-ActionScript (in development yet)
+ActionScript (in development yet) [![build status](https://travis-ci.org/adriancmiranda/actionscript.png?branch=master)](https://travis-ci.org/adriancmiranda/actionscript "build status")
 =================================
 
 To clone this project (and all its submodules):
