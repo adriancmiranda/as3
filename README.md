@@ -11,5 +11,3 @@ To clone this project (and all its submodules):
     CONFIG::FLASH_10_1 (boolean)
     CONFIG::WEB (boolean)
     CONFIG::AIR (boolean)
-
-* [Ant](http://ant.apache.org/bindownload.cgi)
