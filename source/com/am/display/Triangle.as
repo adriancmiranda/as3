@@ -11,10 +11,10 @@ package com.am.display {
 		private var _height:Number;
 		private var _drawToUp:Boolean;
 
-		public function Triangle(color:uint = 0x0, radius:Number = 1, hidden:Boolean = true, drawToUp:Boolean = true) {
+		public function Triangle(color:uint = 0x0, radius:Number = 1, drawToUp:Boolean = true) {
 			this._dimensions = new Dimensions(radius);
-			this._width = hidden ? 0 : this._dimensions.W2;
-			this._height = hidden ? 0 : this._dimensions.H2;
+			this._width = this._dimensions.W2;
+			this._height = this._dimensions.H2;
 			this._drawToUp = drawToUp;
 			this._radius = radius;
 			this._color = color;
@@ -38,9 +38,9 @@ package com.am.display {
 		}
 
 		public function set radius(value:Number):void {
-			this._dimensions = new Dimensions(radius);
-			this._width = hidden ? 0 : this._dimensions.W2;
-			this._height = hidden ? 0 : this._dimensions.H2;
+			this._dimensions = new Dimensions(value);
+			this._width = this._dimensions.W2;
+			this._height = this._dimensions.H2;
 			this.draw();
 		}
 
