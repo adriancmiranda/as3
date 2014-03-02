@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="am" basedir="." default="build">
-	<!-- compile task -->
-	<target name="compile" >
-		<echo>[compile] Loading properties from ${properties.loc}</echo>
+	<description>Another ActionScript Framework</description>
+
+	<!-- compile-swc:
+	 | This task contains the properties you would usually need to build a
+	 | Action Script 3 SWC File.
+	 '-->
+	<target name="compile-swc" >
+		<echo>[compile-swc] Loading properties from ${properties.loc}</echo>
 		<property file="${properties.loc}" />
-		<echo>[compile] Compiling ${package.name}.swc</echo>
+		<echo>[compile-swc] Compiling ${package.name}.swc</echo>
 		<java jar="${flex.sdk}/lib/compc.jar" dir="${flex.sdk}/frameworks" fork="true" failonerror="true">
 			<arg value="-output=${package.output}.swc"/>
 			<arg value="-target-player=${target.player}"/>
@@ -17,16 +22,25 @@
 			<arg value="-verbose-stacktraces=true"/>
 			<arg value="-headless-server=true"/>
 		</java>
-		<echo>[compile] Removing cache file from ${package.output.folder}</echo>
+		<echo>[compile-swc] Removing cache file from ${package.output.folder}</echo>
 		<delete file="${package.output}.swc.cache" />
-		<echo>[compile] ${package.name}.swc created successfully</echo>
+		<echo>[compile-swc] ${package.name}.swc created successfully</echo>
+	</target>
+
+	<!-- test:
+	 | This task contains the properties you would usually need to run the
+	 | unit tests.
+	 | NOTE: Obviously is not yet implemented =(.
+	 '-->
+	<target name="test">
+		<echo>[test] Done!</echo>
 	</target>
 
 	<!-- default: build -->
 	<target name="build">
-		<antcall target="compile">
+		<antcall target="compile-swc">
 			<param name="properties.loc" value="${basedir}/am.properties" />
 		</antcall>
-		<echo>[build] complete =)</echo>
+		<echo>[build] Complete =)</echo>
 	</target>
 </project>
