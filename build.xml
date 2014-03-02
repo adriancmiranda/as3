@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="am" basedir="." default="build">
-	<!-- Compile Release SWC -->
+	<!-- compile task -->
 	<target name="compile" >
-		<echo>[compile] Release SWC ${project.name.versioned}.swc created successfully</echo>
+		<echo>[compile] Loading properties from ${properties.loc}</echo>
+		<property file="${properties.loc}" />
+		<echo>[compile] Compiling ${package.name}.swc</echo>
+		<java jar="${flex.sdk}/lib/compc.jar" dir="${flex.sdk}/frameworks" fork="true" failonerror="true">
+			<arg value="-output=${package.output}.swc"/>
+			<arg value="-target-player=${target.player}"/>
+			<arg value="-include-sources=${package.source.folder}"/>
+			<arg value="-keep-as3-metadata+=Event"/>
+			<arg value="-keep-as3-metadata+=API"/>
+			<arg value="-keep-as3-metadata+=Inspectable"/>
+			<arg value="-incremental=true"/>
+			<arg value="-static-link-runtime-shared-libraries=true"/>
+			<arg value="-verbose-stacktraces=true"/>
+			<arg value="-headless-server=true"/>
+		</java>
+		<echo>[compile] Removing cache file from ${package.output.folder}</echo>
+		<delete file="${package.output}.swc.cache" />
+		<echo>[compile] ${package.name}.swc created successfully</echo>
 	</target>
-	
-	<!-- Compile Modules SWC -->
+
+	<!-- default: build -->
 	<target name="build">
-		<echo>[build] COMPLETE</echo>
+		<antcall target="compile">
+			<param name="properties.loc" value="${basedir}/am.properties" />
+		</antcall>
+		<echo>[build] complete =)</echo>
 	</target>
 </project>
