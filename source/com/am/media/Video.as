@@ -131,7 +131,7 @@ package com.am.media {
 		private function updatePreloader(event:Event):void {
 			if (this._percentLoaded >= 100) {
 				if (this._duration) {
-					//this._stream.pause(); // autoplay?
+					this._stream.pause();
 					super.dispatchEvent(new Event(Event.COMPLETE));
 					this.removeEventListener(Event.ENTER_FRAME, this.updatePreloader);
 				}
