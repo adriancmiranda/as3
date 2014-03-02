@@ -39,7 +39,7 @@
 	<!-- default: build -->
 	<target name="build">
 		<antcall target="compile-swc">
-			<param name="properties.loc" value="${basedir}/am.properties" />
+			<param name="properties.loc" value="${basedir}/build.properties" />
 		</antcall>
 		<echo>[build] Complete =)</echo>
 	</target>
