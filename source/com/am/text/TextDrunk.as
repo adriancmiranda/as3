@@ -1,4 +1,4 @@
-package com.ad.text {
+package com.am.text {
 	import flash.display.DisplayObjectContainer;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
