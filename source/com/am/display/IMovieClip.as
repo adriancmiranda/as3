@@ -1,4 +1,5 @@
 package com.am.display {
+	import flash.display.Scene;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

@@ -1,6 +1,7 @@
 package com.am.display {
 	import com.am.display.Leprechaun;
 	import flash.display.BitmapData;
+	import flash.events.Event;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

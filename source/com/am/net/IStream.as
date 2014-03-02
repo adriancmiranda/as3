@@ -1,4 +1,5 @@
 package com.am.net {
+	import flash.net.NetConnection;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

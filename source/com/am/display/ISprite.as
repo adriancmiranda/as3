@@ -1,4 +1,7 @@
 package com.am.display {
+	import flash.display.DisplayObject;
+	import flash.display.Graphics;
+	import flash.display.Sprite;
 	import flash.geom.Rectangle;
 	import flash.media.SoundTransform;
 

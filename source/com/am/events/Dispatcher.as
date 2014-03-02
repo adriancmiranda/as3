@@ -1,17 +1,17 @@
 package com.am.events {
-	import com.am.events.IDispatcher;
+	import flash.events.IEventDispatcher;
 	import flash.events.EventDispatcher;
 	import flash.events.Event;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
-	public class Dispatcher implements IDispatcher {
+	public class Dispatcher implements IEventDispatcher {
 		private var _types:Vector.<String> = new Vector.<String>();
 		private var _listeners:Vector.<Function> = new Vector.<Function>();
-		private var _dispatcher:IDispatcher;
+		private var _dispatcher:IEventDispatcher;
 
-		public function Dispatcher(target:IDispatcher = null) {
+		public function Dispatcher(target:IEventDispatcher = null) {
 			this._dispatcher = new EventDispatcher(target);
 		}
 

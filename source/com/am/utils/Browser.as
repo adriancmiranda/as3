@@ -101,7 +101,7 @@ package com.am.utils {
 		}
 
 		public static function get baseURL():String {
-			var path = pathname.split('/').slice(0, -1).join('/');
+			var path:String = pathname.split('/').slice(0, -1).join('/');
             return (protocol +'//'+ host + (port ? ':' + port : '') + path);
 		}
 

@@ -1,6 +1,7 @@
 package com.am.display {
 	import flash.geom.Point;
 	import flash.text.TextSnapshot;
+	import flash.display.DisplayObject;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

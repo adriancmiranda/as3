@@ -199,7 +199,7 @@ package com.am.display {
 			return holder;
 		}
 
-		public function removeChildren(target:DisplayObjectContainer = null):void {
+		public function removeAllChildren(target:DisplayObjectContainer = null):void {
 			Cleaner.removeChildrenOf(target || super);
 		}
 

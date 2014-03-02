@@ -1,6 +1,12 @@
 package com.am.display {
 	import com.am.events.IDispatcher;
 	import flash.accessibility.AccessibilityProperties;
+	import flash.display.IBitmapDrawable;
+	import flash.display.DisplayObjectContainer;
+	import flash.display.DisplayObject;
+	import flash.display.LoaderInfo;
+	import flash.display.Shader;
+	import flash.display.Stage;
 	import flash.geom.Point;
 	import flash.geom.Rectangle;
 	import flash.geom.Transform;
