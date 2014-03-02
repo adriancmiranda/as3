@@ -1,4 +1,4 @@
 language: java
 before_script:
-  - echo "TODO: Fix $FLEX_HOME"
+  - echo "TODO: Fix $FLEX_SDK"
 script: ant
