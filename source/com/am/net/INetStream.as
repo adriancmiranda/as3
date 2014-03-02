@@ -9,9 +9,9 @@ package com.am.net {
 	public interface INetStream extends IDispatcher {
 		function get bufferLength():Number;
 		function get bufferTime():Number;
-		function set bufferTime(bt:Number):void;
-		function get bytesLoaded():int;
-		function get bytesTotal():int;
+		function set bufferTime(value:Number):void;
+		function get bytesLoaded():uint;
+		function get bytesTotal():uint;
 		function get client():Object;
 		function set client(value:Object):void;
 		function get currentFPS():Number;

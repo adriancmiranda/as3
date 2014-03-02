@@ -16,11 +16,16 @@ package com.am.net {
 		public static var checkPolicyFile:Boolean = true;
 		private var _connection:NetConnection;
 		private var _isPaused:Boolean;
+		private var _metaData:Object;
 		private var _timer:Timer;
 
 		public function Stream(connection:NetConnection = null, timer:Timer = null, peerID:String = 'connectToFMS') {
 			super(this.getOwnConnection(connection), peerID);
 			super.checkPolicyFile = Stream.checkPolicyFile;
+			super.client = new Object();
+			super.client.onCuePoint = this.onCuePoint;
+			super.client.onXMPData = this.onXMPData;
+			super.client.onXMPXML = this.onXMPXML;
 			this._timer = timer;
 		}
 
@@ -117,6 +122,19 @@ package com.am.net {
 			return uint(num(super.bytesTotal));
 		}
 
+		private function onCuePoint(info:Object):void {
+			trace('cuepoint: time=' + info.time + ' name=' + info.name + ' type=' + info.type);
+		}
+
+		private function onMetaData(info:Object):void {
+			this._metaData = info;
+		}
+
+		private function onXMPData(info:Object):void {
+			var onXMPXML:XML = new XML(info.data);
+			trace(onXMPXML);
+		}
+
 		public function get bufferPercent():Number {
 
 		    return clamp(num((this.bufferTime / this.bufferLength) * 100), 0, 100);
@@ -144,6 +162,10 @@ package com.am.net {
 
 		public function get paused():Boolean {
 			return this._isPaused;
+		}
+
+		public function get metaData():Object {
+			return this._metaData;
 		}
 
 		override public function dispose():void {
