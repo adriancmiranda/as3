@@ -1,1 +1,2 @@
+install: ant
 script: ant test
