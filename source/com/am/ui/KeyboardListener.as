@@ -1,7 +1,7 @@
 package com.am.ui {
 	import com.am.events.KeyboardNote;
 	import com.am.events.Dispatcher;
-	import com.am.utils.ArrayUtil;
+	import com.am.utils.ArrayHelper;
 
 	import flash.display.Stage;
 	import flash.events.KeyboardEvent;
@@ -131,7 +131,7 @@ package com.am.ui {
 		}
 
 		private function checkDownKeys(keyCombo:Keys):void {
-			var uniqueCombo:Array = ArrayUtil.removeDuplicates(keyCombo.keyCodes);
+			var uniqueCombo:Array = ArrayHelper.removeDuplicates(keyCombo.keyCodes);
 			var id:uint = uniqueCombo.length;
 			while (id--) if (!this.keysDown[uniqueCombo[id]]) return;
 			var keyComboDown:KeyboardNote = new KeyboardNote(KeyboardNote.KEY_COMBO_DOWN);
@@ -141,7 +141,7 @@ package com.am.ui {
 		}
 
 		private function checkTypedKeys(keyCombo:Keys):void {
-			if (ArrayUtil.strictlyEquals(keyCombo.keyCodes, this.keysTyped.slice(-keyCombo.keyCodes.length))) {
+			if (ArrayHelper.strictlyEquals(keyCombo.keyCodes, this.keysTyped.slice(-keyCombo.keyCodes.length))) {
 				var keyComboSeq:KeyboardNote = new KeyboardNote(KeyboardNote.KEY_COMBO_TYPED);
 				keyComboSeq.keyCombo = keyCombo;
 				super.dispatchEvent(keyComboSeq);

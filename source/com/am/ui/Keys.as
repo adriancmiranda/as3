@@ -1,5 +1,5 @@
 package com.am.ui {
-	import com.am.utils.ArrayUtil;
+	import com.am.utils.ArrayHelper;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
@@ -31,7 +31,7 @@ package com.am.ui {
 
 		public function equals(keyCombo:Keys):Boolean {
 			if (keyCombo == this) return true;
-			return ArrayUtil.strictlyEquals(this.keyCodes, keyCombo.keyCodes);
+			return ArrayHelper.strictlyEquals(this.keyCodes, keyCombo.keyCodes);
 		}
 
 		public function toString():String {
