@@ -100,6 +100,11 @@ package com.am.utils {
 			return new URLVariables(source ? source.substring(1, source.length) : null);
 		}
 
+		public static function get baseURL():String {
+			var path = pathname.split('/').slice(0, -1).join('/');
+            return (protocol +'//'+ host + (port ? ':' + port : '') + path);
+		}
+
 		public static function get appName():String {
 			return call('navigator.appName.toString');
 		}
