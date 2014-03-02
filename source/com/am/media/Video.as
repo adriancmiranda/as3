@@ -13,7 +13,6 @@ package com.am.media {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 * @tips To use video steps just player 10.1 or older and
 	 * export video with key frame distance: 1
-	 * TODO: optional autoplay
 	 */
 	public class Video extends flash.media.Video {
 		public static const MIN_SPEED:Number = 0.02;
@@ -132,7 +131,7 @@ package com.am.media {
 		private function updatePreloader(event:Event):void {
 			if (this._percentLoaded >= 100) {
 				if (this._duration) {
-					//this._stream.pause(); // autoplay?
+					this._stream.pause();
 					super.dispatchEvent(new Event(Event.COMPLETE));
 					this.removeEventListener(Event.ENTER_FRAME, this.updatePreloader);
 				}
