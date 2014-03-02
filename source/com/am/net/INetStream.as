@@ -18,7 +18,7 @@ package com.am.net {
 		function close():void;
 		function pause():void;
 		function resume():void;
-		function play(start:Number = -2, length:Number = -1):void;
+		function play(...rest):void;
 		function seek(offset:Number):void;
 		function get soundTransform():SoundTransform;
 		function set soundTransform(value:SoundTransform):void;

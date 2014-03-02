@@ -37,7 +37,7 @@ package com.am.display {
 			this._topRightRadius = NaN;
 			this._topLeftRadius = NaN;
 			this._alpha = NaN;
-			this._heigth = NaN;
+			this._height = NaN;
 			this._width = NaN;
 			this._fill = null;
 		}

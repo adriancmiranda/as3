@@ -4,6 +4,7 @@ package com.am.display {
 
 	import flash.events.Event;
 	import flash.display.Shape;
+	import flash.display.Scene;
 	import flash.display.Sprite;
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
@@ -246,6 +247,10 @@ package com.am.display {
 		//
 		//
 
+		public function addFrameScript(...args:*):void {
+			// never implement
+		}
+
 		public function gotoAndStop(frame:Object, scene:String = null):void {
 			// never implement
 		}
@@ -310,6 +315,14 @@ package com.am.display {
 			// never implement
 		}
 
+		public function get currentFrameLabel():String {
+			return '';
+		}
+
+		public function get currentScene():Scene {
+			return null;
+		}
+
 		public function frameIsValid(frame:Object):Boolean {
 			return !1;
 		}
@@ -351,6 +364,10 @@ package com.am.display {
 		}
 
 		public function get currentLabels():Array {
+			return [];
+		}
+
+		public function get scenes():Array {
 			return [];
 		}
 
