@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="am" basedir="." default="build-all">
+<project name="am" basedir="." default="build">
 	<!-- Compile Release SWC -->
 	<target name="compile" >
 		<echo>[compile] Release SWC ${project.name.versioned}.swc created successfully</echo>
 	</target>
-
-	<target name="build-all">
+	
+	<!-- Compile Modules SWC -->
+	<target name="build">
 		<echo>[build] COMPLETE</echo>
 	</target>
 </project>
