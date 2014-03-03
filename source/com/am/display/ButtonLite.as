@@ -1,4 +1,5 @@
 package com.am.display {
+	import com.am.utils.clamp;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
@@ -142,16 +143,8 @@ package com.am.display {
 			super.x = event.stageX - this._offset.x;
 			super.y = event.stageY - this._offset.y;
 			if (this._bounds != null) {
-				if (super.x < this._bounds.left) {
-					super.x = this._bounds.left;
-				} else if (super.x > this._bounds.right) {
-					super.x = this._bounds.right;
-				}
-				if (super.y < this._bounds.top) {
-					super.y = this._bounds.top;
-				} else if (super.y > this._bounds.bottom) {
-					super.y = this._bounds.bottom;
-				}
+				super.x = clamp(super.x, this._bounds.left, this._bounds.right);
+				super.y = clamp(super.y, this._bounds.top, this._bounds.bottom);
 			}
 			this.dragging();
 			event.updateAfterEvent();
