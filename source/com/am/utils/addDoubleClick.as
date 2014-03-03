@@ -1,4 +1,4 @@
-package com.ad.common {
+package com.am.common {
 	import flash.display.DisplayObject;
 	import flash.events.MouseEvent;
 	import flash.utils.clearTimeout;
