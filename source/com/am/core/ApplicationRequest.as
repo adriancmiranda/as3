@@ -8,7 +8,7 @@ package com.am.core {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
-	 * @xml
+	 * @xml:
 	 *	<header history="yes" strict="yes" connections="2" flow="normal" title="Some title">
 	 *		<file id="layers" url="{@baseContent}content/settings/layers.xml" kb="4"/>
 	 *		<base id="base" class="project.Base" standard="main" mistake="main">
