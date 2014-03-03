@@ -23,7 +23,7 @@ package com.am.utils {
 	 *   The following conversion specifiers are supported: 'd', 'i', 'o', 'u', 'x',
 	 *   'X', 'f', 'F', 'c', 's', '%'
 	 */
-	public function sprintf(format:String, ... args):String {
+	public function sprintf(format:String, ...args):String {
 		var result:String = '';
 
 		var length:int = format.length;
