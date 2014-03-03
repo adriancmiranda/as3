@@ -1,4 +1,4 @@
-ActionScript (in development yet) [![build status][travis_build_status_image]][travis_build_status_url]
+ActionScript (β) [![build status][travis_build_status_image]][travis_build_status_url]
 =================================
 
 To clone this project (and all its submodules):
