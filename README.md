@@ -15,8 +15,8 @@ To clone this project (and all its submodules):
 
 ### Submodule
 * [AS3 Core Lib][as3corelib]
-* [GA for Flash][gaforflash]
 * [SWF Address][swfaddress]
+* [GA for Flash][gaforflash]
 * [Greensock][greensock]
 
 ====
