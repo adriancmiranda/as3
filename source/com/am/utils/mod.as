@@ -1,5 +1,4 @@
 package com.am.utils {
-	import com.am.utils.num;
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

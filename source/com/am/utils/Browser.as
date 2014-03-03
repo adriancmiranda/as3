@@ -1,6 +1,4 @@
 package com.am.utils {
-	import com.am.utils.num;
-
 	import flash.system.Security;
 	import flash.external.ExternalInterface;
 	import flash.net.sendToURL;
@@ -102,7 +100,7 @@ package com.am.utils {
 
 		public static function get baseURL():String {
 			var path:String = pathname.split('/').slice(0, -1).join('/');
-            return (protocol +'//'+ host + (port ? ':' + port : '') + path);
+			return (protocol +'//'+ host + (port ? ':' + port : '') + path);
 		}
 
 		public static function get appName():String {
