@@ -32,8 +32,6 @@ To clone this project (and all its submodules):
 Support
 =======
 
- * [Issue tracker][issue_tracker]
-
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 [issue_tracker]: http://github.com/adriancmiranda/actionscript/issues "Issue tracker"
