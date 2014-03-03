@@ -6,6 +6,9 @@ package com.am.text {
 	import flash.text.TextField;
 	import flash.utils.Timer;
 
+	/**
+	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
+	 */
 	public class TextDrunk extends EventDispatcher {
 		public static const DONE:String = 'done';
 		public static const LEFT:String = 'left';
