@@ -15,14 +15,22 @@ To clone this project (and all its submodules):
 
 ### Classes with dependences:
 * [ThumbnailMax][ThumbnailMax]
-	*   com.greensock.events.LoaderEvent;
-	*   com.greensock.loading.core.LoaderCore;
+	*   [LoaderEvent][LoaderEvent]
+	*   [LoaderCore][LoaderCore]
 * [ThumbnailLite][ThumbnailLite]
+	*   [LoaderEvent][LoaderEvent]
+	*   [LoaderCore][LoaderCore]
 * [ObjectHelper][ObjectHelper]
+	*   [JSON][JSON]
 
 [travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
 [travis_build_status_url]: https://travis-ci.org/adriancmiranda/actionscript "build status"
 
-[ThumbnailMax]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailMax.as
-[ThumbnailLite]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailLite.as
-[ObjectHelper]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/utils/ObjectHelper.as
+[ThumbnailMax]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailMax.as "com.am.display.ThumbnailMax"
+[ThumbnailLite]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
+[ObjectHelper]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
+
+[LoaderEvent]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as "com.greensock.events.LoaderEvent"
+[LoaderCore]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as "com.greensock.loading.core.LoaderCore"
+
+[JSON]: https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as "com.adobe.serialization.json.JSON"
