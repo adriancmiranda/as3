@@ -15,6 +15,8 @@ To clone this project (and all its submodules):
 
 ### Classes with dependences:
 * [ThumbnailMax][ThumbnailMax]
+*   import com.greensock.events.LoaderEvent;
+	import com.greensock.loading.core.LoaderCore;
 * [ThumbnailLite][ThumbnailLite]
 * [ObjectHelper][ObjectHelper]
 
