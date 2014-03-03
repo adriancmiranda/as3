@@ -38,6 +38,6 @@ package com.am.utils {
 		}
 		return function removeDoubleClick():void {
 			target.removeEventListener(MouseEvent.MOUSE_DOWN, onmousedown, false);
-		}
+		};
 	}
 }
