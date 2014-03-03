@@ -5,15 +5,15 @@ To clone this project (and all its submodules):
 
     git clone --recursive git://github.com/adriancmiranda/actionscript.git
 
-## Dependencies:
-### Config constants:
+## Dependencies
+### Config constants
     
     CONFIG::SUBMODULE (boolean)
     CONFIG::FLASH_10_1 (boolean)
     CONFIG::WEB (boolean)
     CONFIG::AIR (boolean)
 
-### Submodule:
+### Submodule
 * [ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
