@@ -1,4 +1,4 @@
-package com.ad.text {
+package com.am.text {
 	import flash.events.KeyboardEvent;
 	import flash.text.TextField;
 	import flash.ui.Keyboard;

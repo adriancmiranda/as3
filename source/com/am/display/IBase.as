@@ -1,4 +1,4 @@
-package com.am.interfaces {
+package com.am.display {
 	import flash.geom.Rectangle;
 
 	/**
