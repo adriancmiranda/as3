@@ -18,6 +18,8 @@ To clone this project (and all its submodules):
 * [Greensock][greensock]
 * [AS3 Core Lib][as3corelib]
 
+====
+
 * [ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
