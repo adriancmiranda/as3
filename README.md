@@ -19,8 +19,6 @@ To clone this project (and all its submodules):
 * [GA for Flash][gaforflash]
 * [Greensock][greensock]
 
-====
-
 ### Submodules dependency
 * [com.am.display.ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
