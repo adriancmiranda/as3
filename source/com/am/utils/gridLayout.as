@@ -9,8 +9,8 @@ package com.am.utils {
 		var id:int, point:Point, vector:Vector.<Point> = new Vector.<Point>();
 		for (id = 0; id < length; id++) {
 			point = new Point(
-				  horizontal ? Math.round((width + marginX) * (id % columns)) : Math.round((width + marginX) * Math.floor(id / columns))
-				, horizontal ? Math.round((height + marginY) * Math.floor(id / columns)) : Math.round((height + marginY) * (id % columns))
+				  horizontal ? Math.round((width + marginX) * (id % columns)) : Math.round((width + marginX) * ~~(id / columns))
+				, horizontal ? Math.round((height + marginY) * ~~(id / columns)) : Math.round((height + marginY) * (id % columns))
 			);
 			vector.push(point);
 		}
