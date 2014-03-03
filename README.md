@@ -14,6 +14,10 @@ To clone this project (and all its submodules):
     CONFIG::AIR (boolean)
 
 ### Submodule
+* [GA for Flash][gaforflash]
+* [Greensock][greensock]
+* [AS3 Core Lib][as3corelib]
+
 * [ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
@@ -39,10 +43,13 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [ThumbnailLite]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
 [ObjectHelper]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
 
+[greensock]: https://github.com/greensock/GreenSock-AS3
 [LoaderEvent]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as "com.greensock.events.LoaderEvent"
 [LoaderCore]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as "com.greensock.loading.core.LoaderCore"
 
+[as3corelib]: https://github.com/mikechambers/as3corelib "AS3 Core Lib"
 [JSON]: https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as "com.adobe.serialization.json.JSON"
 
+[gaforflash]: https://code.google.com/p/gaforflash/ "Google Analytics for flash"
 [AnalyticsTracker]: https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/AnalyticsTracker.as "com.google.analytics.AnalyticsTracker"
 [GATracker]: https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/GATracker.as?r=193 "com.google.analytics.GATracker"
