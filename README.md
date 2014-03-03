@@ -13,12 +13,6 @@ To clone this project (and all its submodules):
     CONFIG::WEB (boolean)
     CONFIG::AIR (boolean)
 
-### Submodules
-* [AS3 Core Lib][as3corelib]
-* [SWF Address][swfaddress]
-* [GA for Flash][gaforflash]
-* [Greensock][greensock]
-
 ### Submodules dependency
 * [com.am.display.ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
@@ -28,6 +22,12 @@ To clone this project (and all its submodules):
 	*   [LoaderCore][LoaderCore]
 * [com.am.utils.ObjectHelper][ObjectHelper]
 	*   [JSON][JSON]
+
+### Submodules
+* [AS3 Core Lib][as3corelib]
+* [SWF Address][swfaddress]
+* [GA for Flash][gaforflash]
+* [Greensock][greensock]
 
 Support
 =======
