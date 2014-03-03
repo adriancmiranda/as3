@@ -4,3 +4,6 @@
 [submodule "library/greensock"]
 	path = library/greensock
 	url = git://github.com/greensock/GreenSock-AS3.git
+[submodule "library/as3corelib"]
+	path = library/as3corelib
+	url = git://github.com/mikechambers/as3corelib.git
