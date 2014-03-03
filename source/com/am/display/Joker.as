@@ -8,8 +8,6 @@ package com.am.display {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
-	 * @see http://gamedev.michaeljameswilliams.com/2009/04/03/extends-override-and-super/
-	 * @see http://flash-creations.com/notes/actionscript_controlsound.php
 	 */
 	dynamic public class Joker extends Fairy implements IMovieClip {
 		private var _movie:MovieClip;
