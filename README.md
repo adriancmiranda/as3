@@ -30,7 +30,7 @@ Support
 
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
-[issue_tracker]: http://github.com/adriancmiranda/flash-compiler/issues "Issue tracker"
+[issue_tracker]: http://github.com/adriancmiranda/actionscript/issues "Issue tracker"
 
 [travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
 [travis_build_status_url]: https://travis-ci.org/adriancmiranda/actionscript "build status"
