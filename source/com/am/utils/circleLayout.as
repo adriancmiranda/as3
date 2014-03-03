@@ -10,7 +10,7 @@ package com.am.utils {
 			piece = (angle * id);
 			radians = (Math.PI * 2 / 360) * piece;
 			point = new Point(Math.round(Math.cos(radians) * radius), Math.round(Math.sin(radians) * radius));
-			array.push({ x:point.x, y:point.y, rotation:getAngle(new Point(), point) });
+			array.push({ x: point.x, y: point.y, rotation: retrieveAngle(new Point(), point) });
 		}
 		return array;
 	}
