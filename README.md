@@ -13,7 +13,7 @@ To clone this project (and all its submodules):
     CONFIG::WEB (boolean)
     CONFIG::AIR (boolean)
 
-### Submodules dependency
+### Submodule dependency
 * [com.am.display.ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
