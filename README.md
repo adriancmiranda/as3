@@ -14,9 +14,9 @@ To clone this project (and all its submodules):
     CONFIG::AIR (boolean)
 
 ### Classes with dependences:
-[ThumbnailMax][ThumbnailMax]
-[ThumbnailLite][ThumbnailLite]
-[ObjectHelper][ObjectHelper]
+* [ThumbnailMax][ThumbnailMax]
+* [ThumbnailLite][ThumbnailLite]
+* [ObjectHelper][ObjectHelper]
 
 [travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
 [travis_build_status_url]: https://travis-ci.org/adriancmiranda/actionscript "build status"
