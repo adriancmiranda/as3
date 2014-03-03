@@ -14,9 +14,9 @@ To clone this project (and all its submodules):
     CONFIG::AIR (boolean)
 
 ### Submodule
+* [AS3 Core Lib][as3corelib]
 * [GA for Flash][gaforflash]
 * [Greensock][greensock]
-* [AS3 Core Lib][as3corelib]
 
 ====
 
