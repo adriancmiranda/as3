@@ -41,6 +41,13 @@ package com.am.utils {
 			}
 			gc();
 		}
+		
+		public static function removeChild(target:DisplayObject):* {
+			if (target == null) return null;
+			if (target.parent == null) return target;
+			if (target.parent.contains(target)) target.parent.removeChild(target);
+			return null;
+		}
 
 		public static function gc():void {
 			System.gc();
