@@ -22,13 +22,13 @@ To clone this project (and all its submodules):
 ====
 
 ### Submodules dependency
-* [ThumbnailMax][ThumbnailMax]
+* [com.am.display.ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
-* [ThumbnailLite][ThumbnailLite]
+* [com.am.display.ThumbnailLite][ThumbnailLite]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
-* [ObjectHelper][ObjectHelper]
+* [com.am.utils.ObjectHelper][ObjectHelper]
 	*   [JSON][JSON]
 
 Support
