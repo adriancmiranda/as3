@@ -18,10 +18,10 @@ package com.am.core {
 	 *	</header>
 	 *
 	 * -----
-	 * @usage
+	 * @usage:
 	 * import com.am.core.ApplicationRequest;
 	 * var app:ApplicationRequest = new ApplicationRequest('projectNameOrNothing');
-	 * app.fromXML('content/settings/sitemap.xml');
+	 * app.fromXML('{@fvBaseContent}content/settings/sitemap.xml');
 	 * app.onParsed = onSitemapParsed;
 	 * app.startup(this);
 	 */
