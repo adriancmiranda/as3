@@ -1,4 +1,4 @@
-package com.am.templates {
+package com.am.display {
 	import com.am.events.TransitionEvent;
 
 	[Event(name = 'TransitionEvent.TRANSITION_IN', type = 'com.am.events.TransitionEvent')]
