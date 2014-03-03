@@ -1,4 +1,4 @@
-package com.am.common {
+package com.am.utils {
 	import flash.text.TextFieldType;
 	import flash.text.AntiAliasType;
 	import flash.text.TextField;

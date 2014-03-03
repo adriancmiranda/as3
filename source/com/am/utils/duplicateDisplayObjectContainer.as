@@ -1,4 +1,4 @@
-package com.am.common {
+package com.am.utils {
 	import flash.display.DisplayObjectContainer;
 	import flash.utils.getQualifiedClassName;
 	import flash.utils.getDefinitionByName;

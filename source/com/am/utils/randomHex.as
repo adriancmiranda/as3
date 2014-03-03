@@ -1,4 +1,4 @@
-package com.am.common {
+package com.am.utils {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
