@@ -1,7 +1,7 @@
 package com.am.core {
 	import com.am.utils.bool;
 	import com.am.utils.Binding;
-	import com.am.utils.BranchUtils;
+	import com.am.utils.BranchHelper;
 	import com.am.errors.AMError;
 
 	import __AS3__.vec.Vector;
@@ -34,18 +34,18 @@ package com.am.core {
 			this._id = xml.@id;
 			this._track = xml.@track;
 			if (this._index) {
-				this._branch = BRANCH += BranchUtils.lputSlash(BranchUtils.cleanup(this.id));
+				this._branch = BRANCH += BranchHelper.lputSlash(BranchHelper.cleanup(this.id));
 				LIST.push(this);
 			} else {
-				this._branch = BranchUtils.lputSlash(BranchUtils.cleanup(this.id));
+				this._branch = BranchHelper.lputSlash(BranchHelper.cleanup(this.id));
 			}
-			this._branch = BranchUtils.arrange(this._branch);
-			this._level = BranchUtils.getLevel(this._branch);
+			this._branch = BranchHelper.arrange(this._branch);
+			this._level = BranchHelper.getLevel(this._branch);
 			if (xml.hasOwnProperty('language')) {
 				this.validateLanguage(xml.language[0]);
 				this.validateLanguages(xml);
 				this._standard = xml.language.length() > 1 ? xml.@standard : xml.language[0].@id;
-				this._standard = BranchUtils.arrange(this.branch + '/' + this._standard);
+				this._standard = BranchHelper.arrange(this.branch + '/' + this._standard);
 				this._languages = new Vector.<Language>();
 				for each (var child:XML in xml.children()) {
 					if (child.@enabled != undefined ? !bool(child.@enabled) : false) continue;
@@ -54,7 +54,7 @@ package com.am.core {
 					this._languages.push(language);
 				}
 			}
-			BRANCH = BranchUtils.trimLastLevel(BRANCH);
+			BRANCH = BranchHelper.trimLastLevel(BRANCH);
 		}
 
 		private function validateLanguages(node:XML):void {
@@ -110,9 +110,9 @@ package com.am.core {
 		}
 
 		public function getLanguage(value:* = 0):Language {
-			if (value is String) value = BranchUtils.arrange(value);
+			if (value is String) value = BranchHelper.arrange(value);
 			if (value == this) return this;
-			if (BranchUtils.cleanup(value) == this.id) return this;
+			if (BranchHelper.cleanup(value) == this.id) return this;
 			if (value == this.node) return this;
 			if (value == this.index) return this;
 			if (value == this.branch) return this;
