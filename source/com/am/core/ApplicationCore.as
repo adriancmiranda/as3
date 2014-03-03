@@ -1,4 +1,4 @@
-package com.ad.core {
+package com.am.core {
 	import com.am.events.Dispatcher;
 	import com.am.nsapplication;
 
