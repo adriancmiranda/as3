@@ -4,7 +4,7 @@ package com.am.utils {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
-	 * TODO: Towing this house of cards.
+	 > TODO: Towing this house of cards.
 	 */
 	public final class Binding {
 

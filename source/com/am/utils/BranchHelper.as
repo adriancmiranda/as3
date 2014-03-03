@@ -2,7 +2,7 @@ package com.am.utils {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
-	 * TODO: Replace all that with regex
+	 > TODO: Replace all that with regex
 	 */
 	public final class BranchHelper {
 
