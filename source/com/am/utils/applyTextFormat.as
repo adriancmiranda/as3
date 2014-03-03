@@ -9,7 +9,7 @@ package com.am.common {
 	public function applyTextFormat(textField:TextField, textFormat:TextFormat = null, resize:Boolean = false):TextFormat {
 		textFormat = textFormat || textField.getTextFormat();
 		textField.mouseWheelEnabled = false;
-		textField.mouseEnabled = false; // WARNING: Habilitar quando precisar usar TextEvent
+		textField.mouseEnabled = false; // WARNING: Enable when you need to use TextEvent
 		textField.embedFonts = true;
 		textField.defaultTextFormat = textFormat;
 		textField.setTextFormat(textFormat);

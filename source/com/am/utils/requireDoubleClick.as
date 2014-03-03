@@ -8,7 +8,7 @@ package com.am.common {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 * simulate double click handler with mouseChildren true
 	 */
-	public function addDoubleClick(target:DisplayObject, listener:Function = null, delay:Number = 0.15):Function {
+	public function requireDoubleClick(target:DisplayObject, listener:Function = null, delay:Number = 0.15):Function {
 		var clicks:uint, timeout:uint, timeup:uint;
 		target.addEventListener(MouseEvent.MOUSE_DOWN, onmousedown, false, 0, true);
 		function onmousedown(event:MouseEvent):void {
