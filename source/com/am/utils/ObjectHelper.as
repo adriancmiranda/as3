@@ -6,7 +6,6 @@ package com.am.utils {
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
-	 * @see http://labs.influxis.com/wp-content/uploads/huw_column1.pdf
 	 */
 	public final class ObjectHelper {
 
