@@ -42,7 +42,7 @@ package com.am.utils {
 			gc();
 		}
 		
-		public static function removeChild(target:DisplayObject):* {
+		public static function removeChild(target:DisplayObjectContainer):* {
 			if (target == null) return null;
 			if (target.parent == null) return target;
 			if (target.parent.contains(target)) target.parent.removeChild(target);
