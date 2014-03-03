@@ -21,7 +21,7 @@
 			<arg value="-static-link-runtime-shared-libraries=true"/>
 			<arg value="-verbose-stacktraces=true"/>
 			<arg value="-headless-server=true"/>
-			<arg value="-define=CONFIG::SUBMODULES,false"/>
+			<arg value="-define=CONFIG::SUBMODULE,false"/>
 			<arg value="-define=CONFIG::FLASH_10_1,false"/>
 			<arg value="-define=CONFIG::AIR,false"/>
 			<arg value="-define=CONFIG::WEB,true"/>
