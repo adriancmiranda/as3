@@ -13,14 +13,14 @@ To clone this project (and all its submodules):
     CONFIG::WEB (boolean)
     CONFIG::AIR (boolean)
 
-### Submodule
+### Submodules
 * [AS3 Core Lib][as3corelib]
 * [SWF Address][swfaddress]
 * [GA for Flash][gaforflash]
 * [Greensock][greensock]
-
 ====
 
+### Submodules dependency
 * [ThumbnailMax][ThumbnailMax]
 	*   [LoaderEvent][LoaderEvent]
 	*   [LoaderCore][LoaderCore]
