@@ -171,14 +171,16 @@ package com.am.net {
 
 		public function debug():void {
 			if (this._request) {
-				trace('***************** TRACEVARS ***************');
+				trace('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+				trace('Request');
+				trace('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 				trace('url:', this._request.url);
 				trace('method:', this._request.method);
 				trace('variables:');
 				for (var key:String in this._request.data) {
 					trace('\t-', key + ':', this._request.data[key]);
 				}
-				trace('******************* #!# *******************');
+				trace('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 			}
 		}
 
