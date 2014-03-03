@@ -1,4 +1,4 @@
-package com.ad.utils {
+package com.am.utils {
 	import __AS3__.vec.Vector;
 
 	/**
