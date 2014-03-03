@@ -29,7 +29,7 @@ package com.am.utils {
 			}
 		}
 		function onmouseup(event:MouseEvent):void {
-			target.removeEventListener(MouseEvent.MOUSE_UP, onmouseup);
+			target.removeEventListener(MouseEvent.MOUSE_UP, onmouseup, false);
 			clearTimeout(timeup);
 			timeup = setTimeout(function():void {
 				clearTimeout(timeout);
@@ -38,6 +38,7 @@ package com.am.utils {
 		}
 		return function removeDoubleClick():void {
 			target.removeEventListener(MouseEvent.MOUSE_DOWN, onmousedown, false);
+			target.removeEventListener(MouseEvent.MOUSE_UP, onmouseup, false);
 		};
 	}
 }
