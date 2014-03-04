@@ -34,6 +34,7 @@ Support
 
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
+[sample]: https://github.com/adriancmiranda/flash-compiler/tree/master/examples/web "web"
 [issue_tracker]: http://github.com/adriancmiranda/actionscript/issues "Issue tracker"
 
 [travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
