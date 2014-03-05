@@ -2,7 +2,7 @@ package com.am.core {
 	import com.am.net.Request;
 	import com.am.utils.Binding;
 	import com.am.errors.AMError;
-	import com.am.proxy.nsapplication;
+	import com.am.nsapplication;
 
 	import flash.display.DisplayObject;
 
