@@ -60,6 +60,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [LoaderMax]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/LoaderMax.as "com.greensock.loading.LoaderMax"
 [MP3Loader]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/MP3Loader.as "com.greensock.loading.MP3Loader"
 [LoaderStatus]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/LoaderStatus.as "com.greensock.loading.LoaderStatus"
+[TweenPlugin]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/plugins/TweenPlugin.as "com.greensock.plugins.TweenPlugin"
 
 [as3corelib]: https://github.com/mikechambers/as3corelib "AS3 Core Lib"
 [JSON]: https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as "com.adobe.serialization.json.JSON"
