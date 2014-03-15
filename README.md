@@ -30,7 +30,7 @@ To clone this project (and all its submodules):
 	*   [com.greensock.loading.core.LoaderCore][LoaderCore]
 * [com.am.utils.ObjectHelper][ObjectHelper]
 	*   [com.adobe.serialization.json.JSON][JSON]
-* [com.am.utils.Analytics]
+* [com.am.utils.Analytics (N/A yet)]
 	*   [com.google.analytics.AnalyticsTracker][AnalyticsTracker]
 	*   [com.google.analytics.GATracker][GATracker]
 
