@@ -11,8 +11,8 @@ package com.am.events {
 
 		public function Note(type:String, target:Object = null, data:Object = null, bubbles:Boolean = false, cancelable:Boolean = false) {
 			super(type, bubbles, cancelable);
-			this._target = target;
-			this.data = data || {};
+			this._target = (target || super.target);
+			this.data = (data || {});
 		}
 
 		override public function get target():Object {
