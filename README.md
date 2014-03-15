@@ -56,6 +56,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [greensock]: https://github.com/greensock/GreenSock-AS3
 [LoaderEvent]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as "com.greensock.events.LoaderEvent"
 [LoaderCore]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as "com.greensock.loading.core.LoaderCore"
+[LoaderItem]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderItem.as "com.greensock.loading.core.LoaderItem"
 
 [as3corelib]: https://github.com/mikechambers/as3corelib "AS3 Core Lib"
 [JSON]: https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as "com.adobe.serialization.json.JSON"
