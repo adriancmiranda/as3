@@ -29,7 +29,7 @@ To clone this project (and all its submodules):
 	*   [com.greensock.events.LoaderEvent][LoaderEvent]
 	*   [com.greensock.loading.core.LoaderCore][LoaderCore]
 * [com.am.utils.ObjectHelper][ObjectHelper]
-	*   [JSON][JSON]
+	*   [com.adobe.serialization.json.JSON][JSON]
 
 ### Submodules
 * [AS3 Core Lib][as3corelib]
