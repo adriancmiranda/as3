@@ -7,9 +7,9 @@
  |
  | usage
  | =====
- | Use '$' preffix to access actionscript public variable in main class (e.g. {$language})
- | Use '@' preffix to access flash variables (e.g. {@fvBaseContent})
- | Don't use preffix to xml node access (e.g. {view.view[0].@class})
+ | Use '$' prefix to access actionscript public variable in main class (e.g. {$language})
+ | Use '@' prefix to access flash variables (e.g. {@fvBaseContent})
+ | Don't use prefix to access xml node (e.g. {view.view[0].@class})
  |
  -->
 <header title="%TITLE% - %VIEW%" flow="normal" history="yes" strict="yes" connections="1">
