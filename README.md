@@ -51,7 +51,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
 [travis_build_status_url]: https://travis-ci.org/adriancmiranda/actionscript "build status"
 
-[ApplicationLoader]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/core/IApplicationLoader.as "com.am.core.ApplicationLoader"
+[ApplicationLoader]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/core/ApplicationLoader.as "com.am.core.ApplicationLoader"
 [ThumbnailMax]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailMax.as "com.am.display.ThumbnailMax"
 [ThumbnailLite]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
 [ObjectHelper]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
