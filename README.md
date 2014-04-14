@@ -1,5 +1,6 @@
 ActionScript (β) [![build status][travis_build_status_image]][travis_build_status_url]
 =================================
+> A personal ActionScript library
 
 To clone this project (and all its submodules):
 
