@@ -1,10 +1,10 @@
-ActionScript (β) [![build status][travis_build_status_image]][travis_build_status_url]
+as3 (β) [![build status][travis_build_status_image]][travis_build_status_url]
 =================================
-> A personal ActionScript library
+> A personal as3 library
 
 To clone this project (and all its submodules):
 
-    git clone --recursive git://github.com/adriancmiranda/actionscript.git
+    git clone --recursive git://github.com/adriancmiranda/as3.git
 
 ## Dependencies
 ### Config constants
@@ -16,24 +16,24 @@ To clone this project (and all its submodules):
 
 ### Submodule dependency
 * [com.am.core.ApplicationLoader][ApplicationLoader]
-	*   [com.greensock.events.LoaderEvent][LoaderEvent]
-	*   [com.greensock.loading.core.LoaderCore][LoaderCore]
-	*   [com.greensock.loading.core.LoaderItem][LoaderItem]
-	*   [com.greensock.loading.LoaderMax][LoaderMax]
-	*   [com.greensock.loading.MP3Loader][MP3Loader]
-	*   [com.greensock.loading.LoaderStatus][LoaderStatus]
-	*   [com.greensock.plugins.TweenPlugin][TweenPlugin]
+    *   [com.greensock.events.LoaderEvent][LoaderEvent]
+    *   [com.greensock.loading.core.LoaderCore][LoaderCore]
+    *   [com.greensock.loading.core.LoaderItem][LoaderItem]
+    *   [com.greensock.loading.LoaderMax][LoaderMax]
+    *   [com.greensock.loading.MP3Loader][MP3Loader]
+    *   [com.greensock.loading.LoaderStatus][LoaderStatus]
+    *   [com.greensock.plugins.TweenPlugin][TweenPlugin]
 * [com.am.display.ThumbnailMax][ThumbnailMax]
-	*   [com.greensock.events.LoaderEvent][LoaderEvent]
-	*   [com.greensock.loading.core.LoaderCore][LoaderCore]
+    *   [com.greensock.events.LoaderEvent][LoaderEvent]
+    *   [com.greensock.loading.core.LoaderCore][LoaderCore]
 * [com.am.display.ThumbnailLite][ThumbnailLite]
-	*   [com.greensock.events.LoaderEvent][LoaderEvent]
-	*   [com.greensock.loading.core.LoaderCore][LoaderCore]
+    *   [com.greensock.events.LoaderEvent][LoaderEvent]
+    *   [com.greensock.loading.core.LoaderCore][LoaderCore]
 * [com.am.utils.ObjectHelper][ObjectHelper]
-	*   [com.adobe.serialization.json.JSON][JSON]
+    *   [com.adobe.serialization.json.JSON][JSON]
 * com.am.utils.Analytics (Not available yet)
-	*   [com.google.analytics.AnalyticsTracker][AnalyticsTracker]
-	*   [com.google.analytics.GATracker][GATracker]
+    *   [com.google.analytics.AnalyticsTracker][AnalyticsTracker]
+    *   [com.google.analytics.GATracker][GATracker]
 
 ### Submodules
 * [AS3 Core Lib][as3corelib]
@@ -47,15 +47,15 @@ Support
 Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 [sample]: https://github.com/adriancmiranda/flash-compiler/tree/master/examples/web "web"
-[issue_tracker]: http://github.com/adriancmiranda/actionscript/issues "Issue tracker"
+[issue_tracker]: http://github.com/adriancmiranda/as3/issues "Issue tracker"
 
-[travis_build_status_image]: https://travis-ci.org/adriancmiranda/actionscript.png?branch=master
-[travis_build_status_url]: https://travis-ci.org/adriancmiranda/actionscript "build status"
+[travis_build_status_image]: https://travis-ci.org/adriancmiranda/as3.png?branch=master
+[travis_build_status_url]: https://travis-ci.org/adriancmiranda/as3 "build status"
 
-[ApplicationLoader]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/core/ApplicationLoader.as "com.am.core.ApplicationLoader"
-[ThumbnailMax]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailMax.as "com.am.display.ThumbnailMax"
-[ThumbnailLite]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
-[ObjectHelper]: https://github.com/adriancmiranda/actionscript/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
+[ApplicationLoader]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/core/ApplicationLoader.as "com.am.core.ApplicationLoader"
+[ThumbnailMax]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailMax.as "com.am.display.ThumbnailMax"
+[ThumbnailLite]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
+[ObjectHelper]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
 
 [greensock]: https://github.com/greensock/GreenSock-AS3
 [LoaderEvent]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as "com.greensock.events.LoaderEvent"
