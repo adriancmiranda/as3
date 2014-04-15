@@ -1,6 +1,8 @@
-as3 (β) [![build status][travis_build_status_image]][travis_build_status_url]
+![AM](http://i.imgur.com/CEEbHaw.gif)
 =================================
 > A personal as3 library
+
+[![build status][travis_build_status_image]][travis_build_status_url]
 
 To clone this project (and all its submodules):
 
