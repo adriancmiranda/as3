@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>AS3 by adriancmiranda</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>AS3</h1>
+        <p>A personal ActionScript library</p>
+        <p class="view"><a href="https://github.com/adriancmiranda/as3">View the Project on GitHub <small>adriancmiranda/as3</small></a></p>
+        <ul>
+          <li><a href="https://github.com/adriancmiranda/as3/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/adriancmiranda/as3/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/adriancmiranda/as3">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><img src="http://i.imgur.com/CEEbHaw.gif" alt="AM">
+</h1>
+
+<blockquote>
+<p>A personal as3 library</p>
+</blockquote>
+
+<p><a href="https://travis-ci.org/adriancmiranda/as3" title="build status"><img src="https://travis-ci.org/adriancmiranda/as3.png?branch=master" alt="build status"></a></p>
+
+<p>To clone this project (and all its submodules):</p>
+
+<pre><code>git clone --recursive git://github.com/adriancmiranda/as3.git
+</code></pre>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<h3>
+<a name="config-constants" class="anchor" href="#config-constants"><span class="octicon octicon-link"></span></a>Config constants</h3>
+
+<pre><code>CONFIG::SUBMODULE (boolean)
+CONFIG::FLASH_10_1 (boolean)
+CONFIG::WEB (boolean)
+CONFIG::AIR (boolean)
+</code></pre>
+
+<h3>
+<a name="submodule-dependency" class="anchor" href="#submodule-dependency"><span class="octicon octicon-link"></span></a>Submodule dependency</h3>
+
+<ul>
+<li>
+<a href="https://github.com/adriancmiranda/as3/blob/master/source/com/am/core/ApplicationLoader.as" title="com.am.core.ApplicationLoader">com.am.core.ApplicationLoader</a>
+
+<ul>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as" title="com.greensock.events.LoaderEvent">com.greensock.events.LoaderEvent</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as" title="com.greensock.loading.core.LoaderCore">com.greensock.loading.core.LoaderCore</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderItem.as" title="com.greensock.loading.core.LoaderItem">com.greensock.loading.core.LoaderItem</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/LoaderMax.as" title="com.greensock.loading.LoaderMax">com.greensock.loading.LoaderMax</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/MP3Loader.as" title="com.greensock.loading.MP3Loader">com.greensock.loading.MP3Loader</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/LoaderStatus.as" title="com.greensock.loading.LoaderStatus">com.greensock.loading.LoaderStatus</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/plugins/TweenPlugin.as" title="com.greensock.plugins.TweenPlugin">com.greensock.plugins.TweenPlugin</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailMax.as" title="com.am.display.ThumbnailMax">com.am.display.ThumbnailMax</a>
+
+<ul>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as" title="com.greensock.events.LoaderEvent">com.greensock.events.LoaderEvent</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as" title="com.greensock.loading.core.LoaderCore">com.greensock.loading.core.LoaderCore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailLite.as" title="com.am.display.ThumbnailLite">com.am.display.ThumbnailLite</a>
+
+<ul>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as" title="com.greensock.events.LoaderEvent">com.greensock.events.LoaderEvent</a>
+</li>
+<li>  <a href="https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/loading/core/LoaderCore.as" title="com.greensock.loading.core.LoaderCore">com.greensock.loading.core.LoaderCore</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/adriancmiranda/as3/blob/master/source/com/am/utils/ObjectHelper.as" title="com.am.utils.ObjectHelper">com.am.utils.ObjectHelper</a>
+
+<ul>
+<li>  <a href="https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as" title="com.adobe.serialization.json.JSON">com.adobe.serialization.json.JSON</a>
+</li>
+</ul>
+</li>
+<li>com.am.utils.Analytics (Not available yet)
+
+<ul>
+<li>  <a href="https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/AnalyticsTracker.as" title="com.google.analytics.AnalyticsTracker">com.google.analytics.AnalyticsTracker</a>
+</li>
+<li>  <a href="https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/GATracker.as?r=193" title="com.google.analytics.GATracker">com.google.analytics.GATracker</a>
+</li>
+</ul>
+</li>
+</ul><h3>
+<a name="submodules" class="anchor" href="#submodules"><span class="octicon octicon-link"></span></a>Submodules</h3>
+
+<ul>
+<li><a href="https://github.com/mikechambers/as3corelib" title="AS3 Core Lib">AS3 Core Lib</a></li>
+<li><a href="https://github.com/robwalch/swfaddress">SWF Address</a></li>
+<li><a href="https://code.google.com/p/gaforflash/" title="Google Analytics for flash">GA for Flash</a></li>
+<li><a href="https://github.com/greensock/GreenSock-AS3">Greensock</a></li>
+</ul><h1>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h1>
+
+<p>Bugs and issues should be reported via the <a href="http://github.com/adriancmiranda/as3/issues" title="Issue tracker">issue tracker</a>.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/adriancmiranda">adriancmiranda</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
