@@ -1,4 +1,4 @@
-package com.am.core {
+package com.am.display {
 	import com.am.display.IBase;
 
 	/**

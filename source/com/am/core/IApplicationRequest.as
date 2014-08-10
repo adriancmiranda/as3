@@ -1,4 +1,6 @@
 package com.am.core {
+	import com.am.display.ISection;
+
 	import flash.display.DisplayObject;
 
 	/**

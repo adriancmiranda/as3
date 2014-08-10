@@ -1,4 +1,5 @@
 package com.am.core {
+	import com.am.display.ISection;
 	import com.am.net.Request;
 	import com.am.utils.Binding;
 	import com.am.errors.AMError;

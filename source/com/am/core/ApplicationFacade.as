@@ -1,4 +1,5 @@
 package com.am.core {
+	import com.am.display.ISection;
 	import com.am.utils.getLayer;
 	import com.am.errors.AMError;
 	import com.am.events.ApplicationEvent;

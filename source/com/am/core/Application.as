@@ -51,28 +51,8 @@ package com.am.core {
 			return this;
 		}
 
-		public function backgroundColor():uint {
-			return this._data.backgroundColor;
-		}
-
-		public function signature():String {
-			return this._data.signature;
-		}
-
-		public function frameRate():Number {
-			return this._data.frameRate;
-		}
-
-		public function frameCount():uint {
-			return this._data.frameCount;
-		}
-
-		public function fileLength():uint {
-			return this._data.fileLength;
-		}
-
-		public function version():uint {
-			return this._data.version;
+		public function get info():ApplicationData {
+			return this._data;
 		}
 	}
 }

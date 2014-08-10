@@ -95,7 +95,7 @@ package com.am.core {
 			this._bufferTime = num(xml.@bufferTime || 5);
 			this._deblocking = int(num(xml.@deblocking));
 			this._smoothing = bool(xml.@smoothing);
-			this._blendMode = xml.@blendMode.toString();
+			this._blendMode = xml.@blendMode.toString() || 'normal';
 			this._rotationX = xml.@rotationX != undefined ? num(xml.@rotationX) : NaN;
 			this._rotationY = xml.@rotationY != undefined ? num(xml.@rotationY) : NaN;
 			this._rotationZ = xml.@rotationZ != undefined ? num(xml.@rotationZ) : NaN;
