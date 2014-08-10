@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form id="register" action="service_save" method="post" marginLeft="0" marginTop="0">
+	<input type="text" id="answer" maxChars="200" width="417" height="57" x="242" y="199" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-answer" invalidMessage="register-invalid-answer" rules=".{2,200}"/>
+	<input type="text" id="name" maxChars="200" width="417" height="28" x="242" y="304" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-name" invalidMessage="register-invalid-name" rules=".{2,200}" restrict="A-Za-zÀ-Ûà-û "/>
+	<input type="cpf" id="cpf" mask="000.000.000-00" width="417" height="28" x="242" y="354" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-cpf" invalidMessage="register-invalid-cpf"/>
+	<input type="text" id="city" maxChars="160" width="197" height="28" x="242" y="405" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-city" invalidMessage="register-invalid-city" rules=".{2,200}" restrict="A-Za-zÀ-Ûà-û "/>
+	<input type="combobox" id="state" selectedIndex="0" maxRows="5" width="150" height="28" x="512" y="405" class="yourproject.register.form.DropDown" required="yes" requiredMessage="register-required-state">
+		<items>
+			<item label="Selecione" value=""/>
+			<item label="AC" value="ac"/>
+			<item label="AL" value="al"/>
+			<item label="AM" value="am"/>
+			<item label="AP" value="ap"/>
+			<item label="BA" value="ba"/>
+			<item label="CE" value="ce"/>
+			<item label="DF" value="df"/>
+			<item label="ES" value="es"/>
+			<item label="GO" value="go"/>
+			<item label="MA" value="ma"/>
+			<item label="MG" value="mg"/>
+			<item label="MS" value="ms"/>
+			<item label="MT" value="mt"/>
+			<item label="PA" value="pa"/>
+			<item label="PB" value="pb"/>
+			<item label="PE" value="pe"/>
+			<item label="PI" value="pi"/>
+			<item label="PR" value="pr"/>
+			<item label="RJ" value="rj"/>
+			<item label="RN" value="rn"/>
+			<item label="RO" value="ro"/>
+			<item label="RR" value="rr"/>
+			<item label="RS" value="rs"/>
+			<item label="SC" value="sc"/>
+			<item label="SE" value="se"/>
+			<item label="SP" value="sp"/>
+			<item label="TO" value="to"/>
+		</items>
+	</input>
+	<input type="date" id="birth_date" mask="00/00/0000" width="197" height="28" x="242" y="455" class="project.register.form.InputField" required="yes" requiredMessage="register-required-birth_date" invalidMessage="register-invalid-birth_date"/>
+	<input type="email" id="email" maxChars="200" width="417" height="28" x="242" y="506" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-email" invalidMessage="register-invalid-email"/>
+	<input type="number" id="ddd" maxChars="2" width="68" height="28" x="242" y="556" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-ddd" invalidMessage="register-invalid-ddd" rules="^.{2}$"/>
+	<input type="number" id="phone" maxChars="9" width="273" height="28" x="386" y="556" class="yourproject.register.form.InputField" required="yes" requiredMessage="register-required-phone" invalidMessage="register-invalid-phone" rules=".{8,9}"/>
+	<input type="checkbox" id="agreed" width="417" height="28" x="199" y="603" class="yourproject.register.form.CheckBox" checked="no" required="yes" requiredMessage="register-required-agreed">
+		<value><![CDATA[Eu li e aceito o <a href="event:terms"><u><b>regulamento</b></u></a>]]></value>
+	</input>
+</form>
