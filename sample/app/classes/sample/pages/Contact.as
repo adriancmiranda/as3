@@ -1,4 +1,4 @@
-package sample {
+package sample.pages {
 	import sample.components.*;
 
 	import com.am.core.*;
@@ -27,19 +27,18 @@ package sample {
 	import flash.net.*;
 	import flash.ui.*;
 
-	public final class Facade extends SectionLite {
-		public var logo:Logo = new Logo();
+	public final class Contact extends SectionLite {
 
-		public function Facade() {
-			super(true, false, null);
+		public function Contact() {
+			super(false, false, null);
 		}
 
 		override protected function initialize():void {
-			addChild(logo);
+			trace('Contact initialised!')
 		}
 
 		override protected function finalize():void {
-			logo.parent.removeChild(logo);
+			// N/A yet.
 		}
 
 		override public function transitionIn():void {
@@ -53,7 +52,7 @@ package sample {
 		}
 
 		override public function arrange():void {
-			logo.move(SW - logo.width - 10, SH - logo.height - 10);
+			// N/A yet.
 		}
 	}
 }

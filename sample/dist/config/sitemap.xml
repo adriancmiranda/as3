@@ -11,6 +11,7 @@
 		<file id="preloader" url="{@fvBaseContent}content/components/preloader.swf" kb="4"/>
 		<file id="base" url="{@fvBaseContent}content/components/base.swf" kb="4"/>
 		<file id="home" url="{@fvBaseContent}content/components/home.swf" kb="4"/>
+		<view id="contact" class="sample.pages.Contact"></view>
 		<view id="home" class="sample.pages.Home"></view>
 	</base>
 </header>

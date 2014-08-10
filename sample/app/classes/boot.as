@@ -44,7 +44,7 @@ package {
 			$('*').auditSize(false);
 			$('*').plugins(ScalePlugin, AutoAlphaPlugin, TintPlugin);
 			$('*').loaders(XMLLoader, SWFLoader, ImageLoader);
-			$('*').classes(Facade, Home);
+			$('*').classes(Facade, Home, Contact);
 			$('*').addEventListener(LoaderEvent.PROGRESS, progress);
 			$('*').addEventListener(LoaderEvent.COMPLETE, complete);
 			$('*').fromXML('{@fvBaseContent}config/sitemap.xml');
