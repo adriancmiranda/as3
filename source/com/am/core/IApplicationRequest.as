@@ -1,4 +1,4 @@
-package com.am.interfaces {
+package com.am.core {
 	import flash.display.DisplayObject;
 
 	/**

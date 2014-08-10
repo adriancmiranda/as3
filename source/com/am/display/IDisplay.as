@@ -15,7 +15,6 @@ package com.am.display {
 		function set showRegistrationPoint(value:Boolean):void;
 		function moveRegistrationPoint(x:Number, y:Number):void;
 		function removeAllChildren(target:DisplayObjectContainer = null):void;
-		function get ready():Boolean;
 		function die():void;
 		function toString():String;
 	}

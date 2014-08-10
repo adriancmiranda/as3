@@ -74,7 +74,7 @@ package com.am.core {
 				return Texts.fromJSON(source, useOwnPrintf, instance);
 			} else if (source is XML || source is XMLList) {
 				return Texts.fromXML(source, useOwnPrintf, instance);
-			} else if (ObjectUtil.isObject(source)) {
+			} else if (ObjectHelper.isObject(source)) {
 				return Texts.fromObject(source, useOwnPrintf, instance);
 			}
 			return Texts.shortcutTarget;
@@ -87,7 +87,7 @@ package com.am.core {
 			texts.useOwnPrintf = useOwnPrintf;
 			for (property in object) {
 				value = object[property];
-				if (ObjectUtil.hasComplexContent(value)) {
+				if (ObjectHelper.hasComplexContent(value)) {
 					Texts.fromObject(value, useOwnPrintf, texts);
 				} else {
 					texts[property] = value;
@@ -97,7 +97,7 @@ package com.am.core {
 		}
 
 		public static function fromJSON(json:String, useOwnPrintf:Boolean = false, instance:Texts = null):Texts {
-			return Texts.fromObject(ObjectUtil.decode(json, null), useOwnPrintf, instance);
+			return Texts.fromObject(ObjectHelper.decode(json, null), useOwnPrintf, instance);
 		}
 
 		public static function fromXML(xml:*, useOwnPrintf:Boolean = false, instance:Texts = null):Texts {

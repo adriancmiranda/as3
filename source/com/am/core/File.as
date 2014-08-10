@@ -89,10 +89,10 @@ package com.am.core {
 			this._estimatedDuration = xml.@estimatedDuration != undefined ? Math.max(0, num(xml.@estimatedDuration)) : NaN;
 			this._autoAdjustBuffer = bool(xml.@autoAdjustBuffer);
 			this._checkPolicyFile = bool(xml.@checkPolicyFile);
-			this._initThreshold = uint(num(xml.@initThreshold));
-			this._alternateURL = xml.@alternateURL.toString();
+			this._initThreshold = xml.@initThreshold != undefined ? uint(num(xml.@initThreshold)) : 102400;
+			this._alternateURL = xml.@alternateURL.toString() || null;
 			this._autoDispose = bool(xml.@autoDispose);
-			this._bufferTime = num(xml.@bufferTime);
+			this._bufferTime = num(xml.@bufferTime || 5);
 			this._deblocking = int(num(xml.@deblocking));
 			this._smoothing = bool(xml.@smoothing);
 			this._blendMode = xml.@blendMode.toString();

@@ -2,6 +2,7 @@ package com.am.core {
 	import com.am.utils.bool;
 	import com.am.errors.AMError;
 	import com.am.nsapplication;
+
 	import com.greensock.events.LoaderEvent;
 	import com.greensock.plugins.TweenPlugin;
 	import com.greensock.loading.LoaderStatus;
@@ -67,12 +68,10 @@ package com.am.core {
 				if (super.header.prioritize) {
 					this.prioritizeLoader(super.header.prioritize);
 				}
-				//trace('\n', super.header.views.root);
 				this.prepareViewLoader(super.header.views.root);
 				for each (var view:View in super.header.views.list) {
 					if (view.preload) {
 						if (view.hasFiles) {
-							//trace('\n', view);
 							this.appendFiles(view.files);
 						}
 					}
@@ -201,23 +200,23 @@ package com.am.core {
 						, estimatedDuration: file.estimatedDuration
 						, autoAdjustBuffer: file.autoAdjustBuffer
 						, checkPolicyFile: file.checkPolicyFile
-						// LoaderMax properties - no yet implemented
-						//, initThreshold: file.initThreshold//uint
-						//, alternateURL: file.alternateURL//String
+						, initThreshold: file.initThreshold
+						, alternateURL: file.alternateURL
 						, autoDispose: file.autoDispose
-						//, bufferTime: file.bufferTime//Number
-						//, deblocking: file.deblocking//int
+						, bufferTime: file.bufferTime
+						, deblocking: file.deblocking
 						, smoothing: file.smoothing
-						//, blendMode: file.blendMode//String
+						, blendMode: file.blendMode
 						, rotationX: file.rotationX
 						, rotationY: file.rotationY
 						, rotationZ: file.rotationZ
 						, rotation: file.rotation
-						//, bgColor: file.bgColor//uint
-						//, bgAlpha: file.bgAlpha//Number
+						, bgColor: file.bgColor
+						, bgAlpha: file.bgAlpha
+						// LoaderMax properties - no yet implemented
 						//, visible: file.visible//Number
-						//, hAlign: file.hAlign//String
-						//, vAlign: file.vAlign//String
+						, hAlign: file.hAlign
+						, vAlign: file.vAlign
 						, scaleX: file.scaleX
 						, scaleY: file.scaleY
 						, volume: file.volume
@@ -232,7 +231,6 @@ package com.am.core {
 				} else if (file is LoaderItem) {
 					file.url = super.bind(file.url);
 					file.vars.name = file.vars.name || file.url;
-					//trace('Item \''+ file.vars.name +'\' ({'+ file.url +'})');
 					core = file;
 				}
 				if (core && file) {

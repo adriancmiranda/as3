@@ -13,7 +13,7 @@ package com.am.core {
 	 > TODO: Identificar uma sessão qualquer pelo branch na propriedade standard.
 	 */
 	public final class View {
-		internal namespace nsarmored = 'adriancmiranda.github.io/com/am/core/view.nsarmored';
+		internal namespace nsarmored = 'adriancmiranda.github.io/com/am/core/file.nsarmored';
 		private static var LIST:Vector.<View> = new Vector.<View>();
 		private static var BRANCH:String = new String();
 		private static var INDEX:uint;

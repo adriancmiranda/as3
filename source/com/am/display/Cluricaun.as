@@ -166,7 +166,7 @@ package com.am.display {
             super.mouseChildren = !value;
             super.tabEnabled = !value;
             super.doubleClickEnabled = !value;
-            if (this.ready) {
+            if (this.stage) {
                 super.stage.mouseChildren = !value;
             }
         }
@@ -203,10 +203,6 @@ package com.am.display {
 
         public function removeAllChildren(target:DisplayObjectContainer = null):void {
             Cleaner.removeChildrenOf(target || super);
-        }
-        
-        public function get ready():Boolean {
-            return this.stage != null;
         }
 
         public function die():void {

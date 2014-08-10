@@ -7,6 +7,7 @@ package com.am.display {
 	public interface IBase extends IViewer {
 		function startRendering():void;
 		function stopRendering():void;
+		function get isRendering():Boolean;
 		function get originBounds():Rectangle;
 		function get screen():Rectangle;
 		function arrange():void;
