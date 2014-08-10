@@ -21,12 +21,9 @@
 	<div id="fb-root"></div>
 
 	<!-- app -->
-	<div id="app">
+	<div id="app" class="wrapper">
 		<!-- Flash Player -->
 		<div id="flash-content">
-			<div id="fallback" class="hide">
-				<p>If you're reading this message, it means you either don't have the Flash Player installed, or you have JavaScript turned off in your browser.<br/>Download the latest version of the Flash Player from <a href="http://get.adobe.com/br/flashplayer/">Adobe.com</a></p>
-			</div>
 		</div>
 	</div>
 
@@ -130,7 +127,7 @@
 			if (hasFlashPlayer()) {
 				swfobject.addDomLoadEvent(embedFlashPlayer);
 			} else {
-				document.getElementById('fallback').removeAttribute('class');
+				window.location = 'fallback/index.html';
 			}
 
 			NS.sendToFlashPlayer = sendToFlashPlayer;
