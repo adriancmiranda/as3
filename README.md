@@ -33,7 +33,7 @@ To clone this project (and all its submodules):
     *   [com.greensock.loading.core.LoaderCore][LoaderCore]
 * [com.am.utils.ObjectHelper][ObjectHelper]
     *   [com.adobe.serialization.json.JSON][JSON]
-* com.am.utils.Analytics (Not available yet)
+* [com.am.core.Analytics][Analytics]
     *   [com.google.analytics.AnalyticsTracker][AnalyticsTracker]
     *   [com.google.analytics.GATracker][GATracker]
 
@@ -58,6 +58,7 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [ThumbnailMax]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailMax.as "com.am.display.ThumbnailMax"
 [ThumbnailLite]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/display/ThumbnailLite.as "com.am.display.ThumbnailLite"
 [ObjectHelper]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/utils/ObjectHelper.as "com.am.utils.ObjectHelper"
+[Analytics]: https://github.com/adriancmiranda/as3/blob/master/source/com/am/core/Analytics.as "com.am.core.Analytics"
 
 [greensock]: https://github.com/greensock/GreenSock-AS3
 [LoaderEvent]: https://github.com/greensock/GreenSock-AS3/blob/master/src/com/greensock/events/LoaderEvent.as "com.greensock.events.LoaderEvent"
