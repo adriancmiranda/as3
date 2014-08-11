@@ -35,10 +35,12 @@ package sample {
 		}
 
 		override protected function initialize():void {
+			logo.addEventListener(MouseEvent.CLICK, onClickLogo);
 			addChild(logo);
 		}
 
 		override protected function finalize():void {
+			logo.removeEventListener(MouseEvent.CLICK, onClickLogo);
 			logo.parent.removeChild(logo);
 		}
 
@@ -54,6 +56,10 @@ package sample {
 
 		override public function arrange():void {
 			logo.move(SW - logo.width - 10, SH - logo.height - 10);
+		}
+
+		private function onClickLogo(event:MouseEvent):void {
+			Browser.gotoURL(_('github'), '_blank');
 		}
 	}
 }
