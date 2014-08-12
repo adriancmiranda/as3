@@ -121,6 +121,7 @@ package com.am.text {
             }
             super.dispatchEvent(new Event(UPDATE));
             if (this._setTextString == this._targetText) {
+                super.dispatchEvent(new Event(UPDATE));
                 super.dispatchEvent(new Event(DONE));
                 this._slotTimer.stop();
                 this._timer.stop();
