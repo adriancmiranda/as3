@@ -28,29 +28,29 @@ package sample.components {
     [Embed(source='../../../../dist/content/components/preloader.swf', symbol='components.preloader.Preloader')]
     public class Preloader extends BaseMax {
         private var _percentage:uint;
-
+		
         public function Preloader():void {
             super(false, false, null);
         }
-
+		
         override protected function initialize():void {
             super.play();
         }
-
+		
         override protected function finalize():void {
             super.stop();
         }
-
+		
         override public function transitionIn():void {
             super.transitionIn();
             TweenLite.to(this, 0.3, { alpha:1, onComplete:super.transitionInComplete });
         }
-
+		
         override public function transitionOut():void {
             super.transitionOut();
             TweenLite.to(this, 0.3, { alpha:0, onComplete:super.transitionOutComplete });
         }
-
+		
         public function set progress(percentage:uint):void {
             if (percentage >= _percentage && percentage <= 100) {
                 _percentage = percentage;
