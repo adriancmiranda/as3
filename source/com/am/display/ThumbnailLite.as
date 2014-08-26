@@ -26,7 +26,7 @@ package com.am.display {
 		private var _percentage:Number;
 		private var _loaded:Boolean;
 		private var _url:String;
-
+		
 		public function ThumbnailLite(urlOrRequest:* = null, groupName:String = null, hide:Boolean = false, allow:Boolean = false) {
 			if (allow) {
 				Security.allowDomain('*');
@@ -42,8 +42,8 @@ package com.am.display {
 
 		override protected function onRemovedFromStage(event:Event):void {
 			super.onRemovedFromStage(event);
-			removeLastContent(true);
-			removeContent(true);
+			this.removeLastContent(true);
+			this.removeContent(true);
 		}
 
 		public function removeLastContent(flush:Boolean = false):void {
@@ -67,10 +67,11 @@ package com.am.display {
 				}
 			}
 		}
-
+		
 		public function load(urlOrRequest:*):void {
 			if (urlOrRequest is LoaderCore) {
 				this._loaded = false;
+				this._percentage = 0;
 				urlOrRequest.addEventListener(LoaderEvent.ERROR, this.onThumbIOError);
 				urlOrRequest.addEventListener(LoaderEvent.PROGRESS, this.onThumbLoading);
 				urlOrRequest.addEventListener(LoaderEvent.COMPLETE, this.onThumbLoaded);
@@ -85,6 +86,7 @@ package com.am.display {
 				loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onThumbLoaded);
 				loader.load(new URLRequest(this._url), new LoaderContext(false, ApplicationDomain.currentDomain));
 			} else if (urlOrRequest is DisplayObject) {
+				this._loaded = false;
 				this._url = null;
 				this._percentage = 0;
 				this._lastContent = this._content;
@@ -92,12 +94,12 @@ package com.am.display {
 				this.onThumbLoaded(null);
 			}
 		}
-
+		
 		public function loadBytes(bytes:ByteArray):void {
 			this._loaded = false;
 			this._percentage = 0;
 			var loader:Loader = new Loader();
-			loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS, this.onThumbLoading);
+			loader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS, this.onThumbLoading);
 			loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, this.onThumbIOError);
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.onThumbLoaded);
 			loader.loadBytes(bytes, new LoaderContext(false, ApplicationDomain.currentDomain));
@@ -107,24 +109,27 @@ package com.am.display {
 			if (event is LoaderEvent) {
 				this._percentage = Math.round(event.target.progress * 100);
 			} else if (event is ProgressEvent) {
-				this._percentage = num((event.bytesLoaded / event.bytesTotal) * 100);
+				this._percentage = percentage(event.bytesLoaded, event.bytesTotal);
 			}
 			this.progress();
 		}
-
+		
 		private function onThumbLoaded(event:*):void {
 			if (event is Event || event is LoaderEvent) {
 				this._lastContent = this._content;
 				this._content = event.target.content;
 			}
+			if (this.onLoad != null) {
+				this.onLoad.apply(super, this.onLoadParams);
+			}
 			this._loaded = true;
 			this.loaded();
 		}
-
+		
 		private function onThumbIOError(event:*):void {
 			this.ioError();
 		}
-
+		
 		public function get url():String {
 			return this._url;
 		}
@@ -132,7 +137,7 @@ package com.am.display {
 		public function get lastContent():* {
 			return this._lastContent;
 		}
-
+		
 		public function get content():* {
 			return this._content;
 		}
@@ -148,15 +153,15 @@ package com.am.display {
 		protected function progress():void {
 			// to override
 		}
-
+		
 		protected function loaded():void {
 			// to override
 		}
-
+		
 		protected function ioError():void {
 			// to override
 		}
-
+		
 		override public function toString():String {
 			return '[ThumbnailLite ' + super.name + ']';
 		}
