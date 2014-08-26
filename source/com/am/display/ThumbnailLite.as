@@ -21,6 +21,8 @@ package com.am.display {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
 	public class ThumbnailLite extends ButtonLite implements IThumb {
+		public var onLoad:Function;
+        	public var onLoadParams:Array;
 		private var _lastContent:*;
 		private var _content:*;
 		private var _percentage:Number;
