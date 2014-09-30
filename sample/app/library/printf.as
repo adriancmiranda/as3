@@ -254,6 +254,7 @@ class Match{
 	public var content : String;
 	public var replacement : String;
 	public var before : String;
+	public function Match():void {}
 	public function toString() : String{
 		return "Match [" + startIndex + " - " + endIndex + "] (" + length + ") " + content + ", replacement:" +replacement + ";"
 	}
