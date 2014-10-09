@@ -8,6 +8,7 @@ package com.am.display {
     import flash.display.Sprite;
     import flash.display.DisplayObject;
     import flash.display.DisplayObjectContainer;
+    import flash.geom.Rectangle;
     import flash.geom.Point;
 
     /**
@@ -16,6 +17,7 @@ package com.am.display {
      > WARNING: @alpha tags are in test.
      */
     public class Leprechaun extends Nymph implements IDisplay/*, ISprite*/ {
+    	private var _bounds:Rectangle = new Rectangle();
         private var _registrationPoint:Point;
         private var _registrationShape:Shape;
         private var _locked:Boolean;
@@ -30,7 +32,8 @@ package com.am.display {
 
         private function onAddedToStage(event:Event):void {
             super.removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage, false);
-            this.rotation = super.rotation;
+            this._bounds = super.getBounds(super);
+			this.rotation = super.rotation;
             this.scaleX = super.scaleX;
             this.scaleY = super.scaleY;
             this.x = super.x;
@@ -40,6 +43,7 @@ package com.am.display {
         private function onRemovedFromStage(event:Event):void {
             super.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage, false);
             this.detachRegistrationPoint();
+            this._bounds = null;
             this._dead = true;
         }
 
@@ -147,29 +151,37 @@ package com.am.display {
 
         public function fit(width:Number, height:Number):void {
             if (super.height < super.width) {
-                super.height = height;
-                this.scaleX = this.scaleY;
-                if (super.width < width) {
-                    super.width = width;
-                    this.scaleY = this.scaleX;
-                }
+                fitY(height);
             } else {
-                super.width = width;
-                this.scaleY = this.scaleX;
-                if (super.height < height) {
-                    super.height = height;
-                    this.scaleX = this.scaleY;
-                }
+                fitX(width);
             }
         }
 
-        public function set locked(value:Boolean):void {
+        public function fitX(width:Number):void {
+        	super.width = width;
+            this.scaleY = this.scaleX;
+            if (super.height < height) {
+                super.height = height;
+                this.scaleX = this.scaleY;
+            }
+        }
+
+        public function fitY(height:Number):void {
+        	super.height = height;
+            this.scaleX = this.scaleY;
+            if (super.width < width) {
+                super.width = width;
+                this.scaleY = this.scaleX;
+            }
+        }
+
+        public function lock(value:Boolean, all:Boolean = false):void {
             this._locked = value;
             super.mouseEnabled = !value;
             super.mouseChildren = !value;
             super.tabEnabled = !value;
             super.doubleClickEnabled = !value;
-            if (this.stage) {
+            if (this.stage && all) {
                 super.stage.mouseChildren = !value;
             }
         }
@@ -177,6 +189,10 @@ package com.am.display {
         public function get locked():Boolean {
             return this._locked;
         }
+
+		public function get originBounds():Rectangle {
+			return this._bounds ? this._bounds.clone() : new Rectangle();
+		}
 
         public function set showRegistrationPoint(value:Boolean):void {
             value ? this.attachRegistrationPoint(5) : this.detachRegistrationPoint();
@@ -205,13 +221,13 @@ package com.am.display {
         }
 
         public function removeAllChildren(target:DisplayObjectContainer = null):void {
-            Cleaner.removeChildrenOf(target || super);
+            Cleaner.removeChildrenOf(target || this);
         }
 
         public function die():void {
             if (!this._dead) {
                 super.removeAllEventListener();
-                Cleaner.kill(super);
+                Cleaner.kill(this);
                 this._dead = true;
             }
         }

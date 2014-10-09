@@ -11,11 +11,11 @@ package com.am.core {
 
 	import flash.display.DisplayObjectContainer;
 
-	[Event(type='ApplicationEvent', name='ApplicationEvent.EXTERNAL_CHANGE')]
-	[Event(type='ApplicationEvent', name='ApplicationEvent.INTERNAL_CHANGE')]
-	[Event(type='ApplicationEvent', name='ApplicationEvent.STARTUP')]
-	[Event(type='ApplicationEvent', name='ApplicationEvent.CHANGE')]
-	[Event(type='ApplicationEvent', name='ApplicationEvent.INIT')]
+	[Event(type='com.am.events.ApplicationEvent', name='ApplicationEvent.EXTERNAL_CHANGE')]
+	[Event(type='com.am.events.ApplicationEvent', name='ApplicationEvent.INTERNAL_CHANGE')]
+	[Event(type='com.am.events.ApplicationEvent', name='ApplicationEvent.STARTUP')]
+	[Event(type='com.am.events.ApplicationEvent', name='ApplicationEvent.CHANGE')]
+	[Event(type='com.am.events.ApplicationEvent', name='ApplicationEvent.INIT')]
 
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>

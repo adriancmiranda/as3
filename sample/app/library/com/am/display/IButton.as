@@ -5,7 +5,7 @@ package com.am.display {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
-	public interface IButton extends IDisplay {
+	public interface IButton extends IViewer {
 		function get data():Object;
 		function get selected():Boolean;
 		function set selected(value:Boolean):void;

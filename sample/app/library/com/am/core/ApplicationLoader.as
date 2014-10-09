@@ -3,6 +3,7 @@ package com.am.core {
 	import com.am.errors.AMError;
 	import com.am.nsapplication;
 
+	import com.greensock.loading.display.ContentDisplay;
 	import com.greensock.events.LoaderEvent;
 	import com.greensock.plugins.TweenPlugin;
 	import com.greensock.loading.LoaderStatus;
@@ -449,6 +450,11 @@ package com.am.core {
 
 		public function getLoader(nameOrURL:String):* {
 			return LoaderMax.getLoader(nameOrURL);
+		}
+
+		public function getRawAsset(nameOrURL:String):* {
+			var asset:ContentDisplay = this.getAsset(nameOrURL);
+			return asset ? asset.rawContent : null;
 		}
 
 		public function getAsset(nameOrURL:String):* {

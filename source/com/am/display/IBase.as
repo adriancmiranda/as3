@@ -8,7 +8,6 @@ package com.am.display {
 		function startRendering():void;
 		function stopRendering():void;
 		function get isRendering():Boolean;
-		function get originBounds():Rectangle;
 		function get screen():Rectangle;
 		function arrange():void;
 	}

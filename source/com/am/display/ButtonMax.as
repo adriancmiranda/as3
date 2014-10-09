@@ -14,7 +14,7 @@ package com.am.display {
     /**
      * @author Adrian C. Miranda <adriancmiranda@gmail.com>
      */
-    dynamic public class ButtonMax extends Cluricaun implements IButton {
+    dynamic public class ButtonMax extends ViewerMax implements IButton {
         private static var BUTTONS:Dictionary = new Dictionary(true);
         private var _reference:uint;
         private var _data:Object = new Object();

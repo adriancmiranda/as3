@@ -68,7 +68,7 @@ package com.am.core {
 			// > TODO: Make this thing right.
 			// @usage: '{@bind}string'['bind']();
 			String.prototype.bind = function():String {
-				return Binding.bind(this, this._binding);
+				return Binding.bind(String(this), this._binding);
 			};
 			if (this._request) {
 				this._request.send(this.bind(this._request.url));

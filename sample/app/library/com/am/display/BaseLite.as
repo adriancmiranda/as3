@@ -8,7 +8,6 @@ package com.am.display {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
 	public class BaseLite extends ViewerLite implements IBase {
-		private var _bounds:Rectangle = new Rectangle();
 		private var _margin:Rectangle = new Rectangle();
 		private var _resolution:Point = new Point();
 		private var _screen:Rectangle = new Rectangle();
@@ -36,7 +35,6 @@ package com.am.display {
 			super.removeEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
 			super.stage.addEventListener(Event.DEACTIVATE, this.onDeactivate);
 			super.stage.addEventListener(Event.ACTIVATE, this.onActivate);
-			this._bounds = super.getBounds(super);
 			this._flashVars = super.stage.loaderInfo.parameters;
 			this._resolution.x = Capabilities.screenResolutionX;
 			this._resolution.y = Capabilities.screenResolutionY;
@@ -158,10 +156,6 @@ package com.am.display {
 
 		public function get resolution():Point {
 			return this._resolution ? this._resolution.clone() : new Point();
-		}
-
-		public function get originBounds():Rectangle {
-			return this._bounds ? this._bounds.clone() : new Rectangle();
 		}
 
 		public function get screen():Rectangle {

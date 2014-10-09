@@ -14,7 +14,7 @@ package com.am.display {
     /**
      * @author Adrian C. Miranda <adriancmiranda@gmail.com>
      */
-    public class ButtonLite extends Leprechaun implements IButton {
+    public class ButtonLite extends ViewerLite implements IButton {
         private static var BUTTONS:Dictionary = new Dictionary(true);
         private var _reference:uint;
         private var _data:Object = new Object();

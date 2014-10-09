@@ -1,6 +1,6 @@
 package com.am.core {
 	import com.am.utils.Cleaner;
-	import com.am.events.TransitionEvent;
+	import com.am.events.Note;
 	import com.am.display.ISection;
 	import com.am.nsapplication;
 
@@ -48,10 +48,10 @@ package com.am.core {
 					//this._section.apiKey = super.apiKey;
 					//this._section.name = view.className;
 					this._section = this._fresh;
-					this._section.addEventListener(TransitionEvent.TRANSITION_IN, this.onSectionTransitionIn);
-					this._section.addEventListener(TransitionEvent.TRANSITION_IN_COMPLETE, this.onSectionTransitionInComplete);
-					this._section.addEventListener(TransitionEvent.TRANSITION_OUT, this.onSectionTransitionOut);
-					this._section.addEventListener(TransitionEvent.TRANSITION_OUT_COMPLETE, this.onSectionTransitionOutComplete);
+					this._section.addEventListener(Note.TRANSITION_IN, this.onSectionTransitionIn);
+					this._section.addEventListener(Note.TRANSITION_IN_COMPLETE, this.onSectionTransitionInComplete);
+					this._section.addEventListener(Note.TRANSITION_OUT, this.onSectionTransitionOut);
+					this._section.addEventListener(Note.TRANSITION_OUT_COMPLETE, this.onSectionTransitionOutComplete);
 					super.container.addEventListener(Event.ADDED, onSectionAdded);
 					super.container.addChild(DisplayObject(this._section));
 				}
@@ -65,25 +65,25 @@ package com.am.core {
 			this._section.transitionIn();
 		}
 
-		private function onSectionTransitionIn(event:TransitionEvent):void {
-			if (this._section) this._section.removeEventListener(TransitionEvent.TRANSITION_IN, this.onSectionTransitionIn);
+		private function onSectionTransitionIn(event:Note):void {
+			if (this._section) this._section.removeEventListener(Note.TRANSITION_IN, this.onSectionTransitionIn);
 			this._transitionState |= 1;
 			this._isInterrupted = true;
 		}
 
-		private function onSectionTransitionInComplete(event:TransitionEvent):void {
-			if (this._section) this._section.removeEventListener(TransitionEvent.TRANSITION_IN_COMPLETE, this.onSectionTransitionInComplete);
+		private function onSectionTransitionInComplete(event:Note):void {
+			if (this._section) this._section.removeEventListener(Note.TRANSITION_IN_COMPLETE, this.onSectionTransitionInComplete);
 			this._transitionState &= 2;
 			this._isInterrupted = false;
 		}
 
-		private function onSectionTransitionOut(event:TransitionEvent):void {
-			if (this._section) this._section.removeEventListener(TransitionEvent.TRANSITION_OUT, this.onSectionTransitionOut);
+		private function onSectionTransitionOut(event:Note):void {
+			if (this._section) this._section.removeEventListener(Note.TRANSITION_OUT, this.onSectionTransitionOut);
 			this._transitionState |= 2;
 			this._isInterrupted = true;
 		}
 
-		private function onSectionTransitionOutComplete(event:TransitionEvent):void {
+		private function onSectionTransitionOutComplete(event:Note):void {
 			if (this._section) this.killSection();
 		}
 

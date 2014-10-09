@@ -5,7 +5,7 @@ package com.am.events {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
 	public class Note extends Event {
-		//| 
+		//|
 		//| Transition
 		//|
 		public static const BEFORE_PRELOAD:String = 'Note.BEFORE_PRELOAD';
@@ -18,7 +18,14 @@ package com.am.events {
 		public static const TRANSITION_OUT:String = 'Note.TRANSITION_OUT';
 		public static const AFTER_TRANSITION_OUT:String = 'Note.AFTER_TRANSITION_OUT';
 		public static const TRANSITION_OUT_COMPLETE:String = 'Note.TRANSITION_OUT_COMPLETE';
-		
+		public static const START:String = 'Note.START';
+		public static const PROGRESS:String = 'Note.PROGRESS';
+		public static const STOP:String = 'Note.STOP';
+		public static const TOGGLE_CLOSE:String = 'Note.TOGGLE_CLOSE';
+		public static const CHANGE:String = 'Note.CHANGE';
+		public static const CLOSE:String = 'Note.CLOSE';
+		public static const OPEN:String = 'Note.OPEN';
+
 		protected var _target:Object;
 		protected var _ready:Boolean;
 		public var data:Object;

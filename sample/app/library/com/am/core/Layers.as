@@ -58,7 +58,7 @@ package com.am.core {
 					layer = new Layer(num(node.@width), num(node.@height));
 					layer.name = id;
 					(layer as Layer).setNode(node);
-					(layer as Layer).locked = bool(node.@locked);
+					(layer as Layer).lock(bool(node.@locked));
 					(layer as Layer).showRegistrationPoint = bool(node.@showRegistrationPoint);
 					layer.x = num(node.@x || node.x || '0'); // @temporary
 					layer.y = num(node.@y || node.y || '0'); // @temporary
