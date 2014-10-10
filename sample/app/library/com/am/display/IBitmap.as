@@ -6,14 +6,6 @@ package com.am.display {
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
 	public interface IBitmap extends IDisplayObject {
-		/**
-		 * @am
-		 */
-		function get content():Bitmap;
-
-		/**
-		 * @native
-		 */
 		function get bitmapData():BitmapData;
 		function set bitmapData(value:BitmapData):void;
 		function get pixelSnapping():String;
