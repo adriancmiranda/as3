@@ -16,6 +16,10 @@ package com.am.display {
 		private var _rendering:Boolean;
 		private var _resizable:Boolean;
 		private var _quality:String;
+		public var SW:Number = 0;
+		public var SH:Number = 0;
+		public var CW:Number = 0;
+		public var CH:Number = 0;
 
 		public function BaseMax(resizable:Boolean = false, autoStartRendering:Boolean = false, margin:Rectangle = null) {
 			this._resizable = resizable;
@@ -37,6 +41,10 @@ package com.am.display {
 			this._screen.top = this._margin.y;
 			this._screen.right = (super.stage.stageWidth - this._margin.width);
 			this._screen.bottom = (super.stage.stageHeight - this._margin.height);
+			this.SW = (super.stage.stageWidth);
+			this.SH = (super.stage.stageHeight);
+			this.CW = (super.stage.stageWidth >> 1);
+			this.CH = (super.stage.stageHeight >> 1);
 			if (this._resizable && super.stage) {
 				super.stage.align = 'tl';
 				super.stage.scaleMode = 'noScale';
@@ -81,6 +89,10 @@ package com.am.display {
 					this._screen.right = (super.stage.stageWidth - this._margin.width);
 					this._screen.bottom = (super.stage.stageHeight - this._margin.height);
 				}
+				this.SW = (super.stage.stageWidth);
+				this.SH = (super.stage.stageHeight);
+				this.CW = (super.stage.stageWidth >> 1);
+				this.CH = (super.stage.stageHeight >> 1);
 				this.arrange();
 			} catch (event:Error) {
 				trace('Warning:', this.toString() + '.onStageResize(', event.message, ');');
