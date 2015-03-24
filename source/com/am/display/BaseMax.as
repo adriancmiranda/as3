@@ -75,10 +75,12 @@ package com.am.display {
 
 		protected function onStageResize(event:Event):void {
 			try {
-				this._screen.left = this._margin.x;
-				this._screen.top = this._margin.y;
-				this._screen.right = (super.stage.stageWidth - this._margin.width);
-				this._screen.bottom = (super.stage.stageHeight - this._margin.height);
+				if (this._screen && this._margin) {
+					this._screen.left = this._margin.x;
+					this._screen.top = this._margin.y;
+					this._screen.right = (super.stage.stageWidth - this._margin.width);
+					this._screen.bottom = (super.stage.stageHeight - this._margin.height);
+				}
 				this.arrange();
 			} catch (event:Error) {
 				trace('Warning:', this.toString() + '.onStageResize(', event.message, ');');
