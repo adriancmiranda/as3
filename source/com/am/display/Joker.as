@@ -228,9 +228,9 @@ package com.am.display {
 				this._vars.onUpdate.apply(super, this._vars.onUpdateParams);
 			}
 			if (super.currentFrame < this._targetFrame) {
-				super.jumpFrames(+1);
+				this.jumpFrames(+1);
 			} else if (super.currentFrame > this._targetFrame) {
-				super.jumpFrames(-1);
+				this.jumpFrames(-1);
 			} else if (super.currentFrame == this._targetFrame) {
 				if (this._vars.onComplete) {
 					this._vars.onComplete.apply(super, this._vars.onCompleteParams);
