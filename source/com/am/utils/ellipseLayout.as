@@ -4,14 +4,14 @@ package com.am.utils {
 	/**
 	 * @author Adrian C. Miranda <adriancmiranda@gmail.com>
 	 */
-	public function ellipseLayout(length:int, radius:int):Array {
-		var id:int, point:Point, piece:Number, radians:Number, array:Array = [], angle:Number = 360 / length;
-		for (id = 0; id < length; id++) {
-		  // N/A yet.
-			//piece = (angle * id);
-			//radians = (Math.PI * 2 / 360) * piece;
-			//point = new Point(Math.round(Math.cos(radians) * radius), Math.round(Math.sin(radians) * radius));
-			//array.push({ x: point.x, y: point.y, rotation: retrieveAngle(new Point(), point) });
+	public function ellipseLayout(length:int, smallestRadius:int, biggestRadius:int):Array {
+		var angle:int, lastPoint:Point = new Point(-1, -1), point:Point, array:Array = [];
+		for (angle = 0; angle < length; angle++) {
+			point = new Point(parseInt(biggestRadius * Math.cos(angle * 2 * (Math.PI / length)) + 0.5), parseInt(smallestRadius * Math.sin(angle * 2 * (Math.PI / length)) + 0.5));
+			if (lastPoint.x !== point.x || lastPoint.y !== point.y) {
+				lastPoint = point;
+				array.push({ x: point.x, y: point.y, rotation: retrieveAngle(new Point(), point) });
+			}
 		}
 		return array;
 	}
