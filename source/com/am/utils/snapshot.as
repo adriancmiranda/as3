@@ -11,12 +11,12 @@ package com.am.utils {
 	 */
 	public function snapshot(object:DisplayObject, bounds:Rectangle, scale:Point):Bitmap {
 		var area:Rectangle = new Rectangle(0, 0, bounds.width * scale.x, bounds.height * scale.y);
-    var bitmapData:BitmapData = new BitmapData(bounds.width, bounds.height);
-    var bitmap:Bitmap = new Bitmap(bitmapData, PixelSnapping.ALWAYS, true);
-    var matrix:Matrix = new Matrix();
-    matrix.translate(-bounds.x, -bounds.y);
-    matrix.scale(scale.x, scale.y);
-    bitmapData.draw(object, matrix, null, null, area, true);
-    return bitmap;
+		var bitmapData:BitmapData = new BitmapData(bounds.width, bounds.height);
+		var bitmap:Bitmap = new Bitmap(bitmapData, PixelSnapping.ALWAYS, true);
+		var matrix:Matrix = new Matrix();
+		matrix.translate(-bounds.x, -bounds.y);
+		matrix.scale(scale.x, scale.y);
+		bitmapData.draw(object, matrix, null, null, area, true);
+		return bitmap;
 	}
 }
