@@ -81,4 +81,6 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 [AnalyticsTracker]: https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/AnalyticsTracker.as "com.google.analytics.AnalyticsTracker"
 [GATracker]: https://code.google.com/p/gaforflash/source/browse/trunk/src/com/google/analytics/GATracker.as?r=193 "com.google.analytics.GATracker"
 
-[]: http://rtmpserver.com/wp-content/uploads/2012/04/huw_column1.pdf
+<!-- helpers -->
+
+[Writing A Better Object]: http://rtmpserver.com/wp-content/uploads/2012/04/huw_column1.pdf
