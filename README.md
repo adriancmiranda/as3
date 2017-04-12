@@ -39,6 +39,7 @@ To clone this project (and all its submodules):
 
 ### Submodules
 * [AS3 Core Lib][as3corelib]
+* [SWF Object][swfobject]
 * [SWF Address][swfaddress]
 * [GA for Flash][gaforflash]
 * [Greensock][greensock]
@@ -71,6 +72,8 @@ Bugs and issues should be reported via the [issue tracker][issue_tracker].
 
 [as3corelib]: https://github.com/mikechambers/as3corelib "AS3 Core Lib"
 [JSON]: https://github.com/mikechambers/as3corelib/blob/master/src/com/adobe/serialization/json/JSON.as "com.adobe.serialization.json.JSON"
+
+[swfobject]: https://github.com/swfobject/swfobject
 
 [swfaddress]: https://github.com/robwalch/swfaddress
 
