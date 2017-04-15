@@ -1,3 +1,6 @@
+[submodule "library/swfobject"]
+	path = "library/swfobject"
+	url = "git://github.com/swfobject/swfobject.git"
 [submodule "library/swfaddress"]
 	path = library/swfaddress
 	url = git://github.com/robwalch/swfaddress.git
