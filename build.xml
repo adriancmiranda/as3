@@ -34,7 +34,7 @@
 	<!-- test:
 	 | This task contains the properties you would usually need to run the
 	 | unit tests.
-	 | NOTE: Obviously is not yet implemented =(.
+	 | NOTE: Obviously isn't implemented yet =(.
 	 '-->
 	<target name="test">
 		<echo>[test] Done!</echo>
